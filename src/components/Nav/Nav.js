@@ -7,7 +7,17 @@ import './Nav.css';
 const Nav = (props) => (
   <div className="nav">
     <Link to="/home">
-      <h2 className="nav-title">Prime Solo Project</h2>
+      <h2 className="nav-title">Twitter Sentiment Analyzer</h2>
+    </Link>
+    <Link to="/home">
+      <h2 className="nav-title"> 
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      
+      </h2>
     </Link>
     <div className="nav-right">
       <Link className="nav-link" to="/home">
@@ -19,8 +29,17 @@ const Nav = (props) => (
       {/* Show the link to the info page and the logout button if the user is logged in */}
       {props.user.id && (
         <>
-          <Link className="nav-link" to="/info">
-            Info Page
+          <Link className="nav-link" to="/search">
+            Search Page
+            {/* info page */}
+          </Link>
+          <Link className="nav-link" to="/result">
+            Result Page
+            {/* result page */}
+          </Link>
+          <Link className="nav-link" to="/pie">
+            Chart Page
+            {/* result page */}
           </Link>
           <LogOutButton className="nav-link"/>
         </>
@@ -29,6 +48,7 @@ const Nav = (props) => (
       <Link className="nav-link" to="/about">
         About
       </Link>
+      
     </div>
   </div>
 );

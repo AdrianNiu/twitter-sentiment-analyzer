@@ -11,7 +11,7 @@ body {
 form {
     background-color: #dbd5d5;
     width: 30%;
-    height: 250px;
+    height: 300px;
     margin: 20px auto;
     padding: 25px;
     border-radius: 2px;
@@ -23,17 +23,17 @@ input {
 }
 
 .log-in, .log-out, .register {
-  background-color: #00acb0;
+  background-color: #2B6DAD;
   border-radius: 4px;
   color: #f8f8f8;
-  min-height: 50px;
-  min-width: 100px;
+  min-height: 25px;
+  min-width: 70px;
   outline:0;
   cursor: pointer;
 }
 
 .log-in:hover, .log-out:hover, .register:hover {
-  background-color: #008183;
+  background-color: grey;
 }
 
 /* This line makes the "Register" and "Login" buttons look like links */
@@ -46,4 +46,34 @@ input {
     outline:0;
     border-bottom:1px solid #444; 
     cursor: pointer;
+}
+
+/* 
+.result_table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 25px;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    background-color: greenyellow;
+}
+
+tr:nth-child(odd) {
+    background-color: grey;
+} */
+
+.backgroundImageLogin {
+    height: 120vh;
+    background-image: url("http://www.allwhitebackground.com/images/2/2276.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }

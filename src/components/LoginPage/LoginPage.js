@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
 
 class LoginPage extends Component {
   state = {
@@ -31,6 +32,7 @@ class LoginPage extends Component {
 
   render() {
     return (
+      <div className="backgroundImageLogin">
       <div>
         {this.props.errors.loginMessage && (
           <h2
@@ -45,23 +47,35 @@ class LoginPage extends Component {
           <div>
             <label htmlFor="username">
               Username:
-              <input
+              {/* <input
                 type="text"
                 name="username"
                 value={this.state.username}
                 onChange={this.handleInputChangeFor('username')}
-              />
+              /> */}
+                <InputGroup >
+                  <Input name="username" size="lg" placeholder="Username" value={this.state.username} onChange={this.handleInputChangeFor('username')} />
+                  <InputGroupAddon addonType="append">
+                    {/* <Button color="secondary" onClick={this.handleSubmit}>Search!!</Button> */}
+                  </InputGroupAddon>
+                </InputGroup>
             </label>
           </div>
           <div>
             <label htmlFor="password">
               Password:
-              <input
+              {/* <input
                 type="password"
                 name="password"
                 value={this.state.password}
                 onChange={this.handleInputChangeFor('password')}
-              />
+              /> */}
+                <InputGroup >
+                  <Input name="password" size="lg" type="password" placeholder="Password" value={this.state.password} onChange={this.handleInputChangeFor('password')} />
+                  <InputGroupAddon addonType="append">
+                    {/* <Button color="secondary" onClick={this.handleSubmit}>Search!!</Button> */}
+                  </InputGroupAddon>
+                </InputGroup>
             </label>
           </div>
           <div>
@@ -82,6 +96,8 @@ class LoginPage extends Component {
             Register
           </button>
         </center>
+      </div>
+
       </div>
     );
   }
