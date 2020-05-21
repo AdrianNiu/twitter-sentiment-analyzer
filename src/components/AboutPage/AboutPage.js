@@ -101,7 +101,7 @@ class AboutPage extends Component {
               <h1 className="display-3">Twitter Sentiment Analyzer</h1>
               <p className="lead">Type in any hashtag or keyword and press enter to visualize Tweet Sentiment.</p>
               <hr className="my-2" />
-              <p>This tool can help business to monitor and understand the social sentiment of their brand, product or services. </p>
+              <p>This tool can help business to monitor and understand the social sentiment of their brand, product or services.</p>
               <p className="lead">
                 <div className="input-form">
                   <br />
