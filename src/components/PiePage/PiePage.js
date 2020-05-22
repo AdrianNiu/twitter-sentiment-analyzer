@@ -24,6 +24,7 @@ export class PiePage extends Component {
     componentDidMount() {
         this.props.dispatch({ type: 'GET_FAV' });
         console.log('what is in the fav reducer', this.props.favorites);
+        console.log('what is in the this',this);
         
     }
 
