@@ -55,9 +55,9 @@ export class PiePage extends Component {
                         // { y: 32, label: "Health" },
                         // { y: 22, label: "Finance" },
                         // { y: 15, label: "Education" },
-                        { y: 0, label: "Neutral" },
-                        { y: 0, label: "Negative" },
-                        { y: 0, label: "Positive" }
+                        // { y: 0, label: "Neutral" },
+                        // { y: 0, label: "Negative" },
+                        // { y: 0, label: "Positive" }
                     ]
                 }]
             }
