@@ -59,6 +59,7 @@ class SearchPage extends Component {
     
   };
 
+  // Handle save pie chart
   handleSave = (event) => {
     swal("Successful!", "You have saved the pie chart!");
   };
@@ -141,8 +142,9 @@ class SearchPage extends Component {
             </div>
           </tr></table>
           
+          {/* button handle submit save chart */}
           <br/>
-          < Button aligh="right" color="secondary" onClick={this.handleSave}> Save</Button>
+          < Button aligh="right" color="secondary" onClick={this.handleSave}> Save Chart</Button>
           <br />
           <br />
           <br />
