@@ -4,6 +4,8 @@
 -- ex. SELECT * FROM "user";
 -- Otherwise you will have errors!
 -- input for more table
+-- need to add an sql for the pie chart database, the info needed are, date keyword searched, note, and the percentage
+
 
 CREATE TABLE "user" (
     "id" SERIAL PRIMARY KEY,
