@@ -39,7 +39,7 @@ router.get('/:id', (req, res) => {
     client.get('search/tweets', params, function (error, tweets, response) {
         if (!error) {
             // console.log(req.params);
-            
+            // Need update to streamline the sentiment calculation
             var twitterData = [];
         var sentiment_text = tweets.statuses;
             sentiment_text.forEach(function(s){
