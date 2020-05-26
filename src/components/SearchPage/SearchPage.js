@@ -63,7 +63,7 @@ class SearchPage extends Component {
   handleSave = (event) => {
     swal("Successful!", "You have saved the pie chart!");
     console.log('In Handle Save Pie Button');
-    this.props.dispatch({ type: "SAVE_PIE", payload: this.props.reduxState.searchReducer })
+    this.props.dispatch({ type: "SAVE_PIE", payload: this.props.reduxState.searchReducer[this.props.reduxState.searchReducer.length - 1].counter })
   };
 
   addToFav = (tweet) => {
