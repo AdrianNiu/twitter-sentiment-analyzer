@@ -4,6 +4,7 @@ import loginMode from './loginModeReducer';
 import user from './userReducer';
 import searchReducer from './searchReducer';
 import favoriteReducer from './favoriteReducer';
+import pieReducer from './pieRedducer';
 
 
 // rootReducer is the primary reducer for our entire project
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   user, // will have an id and username if someone is logged in
   searchReducer,
   favoriteReducer,
+  pieReducer,
 });
 
 export default rootReducer;

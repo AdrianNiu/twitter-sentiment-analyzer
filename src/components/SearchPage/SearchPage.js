@@ -62,8 +62,8 @@ class SearchPage extends Component {
   // Handle save pie chart
   handleSave = (event) => {
     swal("Successful!", "You have saved the pie chart!");
-    console.log('In Handle Save Pie Button');
-    this.props.dispatch({ type: "SAVE_PIE", payload: this.props.reduxState.searchReducer[this.props.reduxState.searchReducer.length - 1].counter })
+    console.log('In Handle Save Pie Button', event);
+    this.props.dispatch({ type: "SAVE_PIE", payload: {saved_pie: this.props.reduxState.searchReducer[this.props.reduxState.searchReducer.length - 1].counter, keyword: this.state.search} })
   };
 
   addToFav = (tweet) => {
@@ -146,7 +146,7 @@ class SearchPage extends Component {
           
           {/* button handle submit save chart */}
           <br/>
-          < Button aligh="right" color="secondary" onClick={this.handleSave}> Save Chart</Button>
+          < Button aligh="right" color="secondary" onClick={(event) => this.handleSave(event)}> Save Chart</Button>
           <br />
           <br />
           <br />

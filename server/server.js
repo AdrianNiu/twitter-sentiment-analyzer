@@ -13,6 +13,7 @@ const userRouter = require('./routes/user.router');
 const searchRouter = require('./routes/search.router')
 const twitterSearch = require('./routes/twitterSearch.router');
 const favoriteRouter = require('./routes/favorite.router');
+const pieRouter = require('./routes/pie.router');
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -27,9 +28,10 @@ app.use(passport.session());
 
 /* Routes */
 app.use('/api/user', userRouter);
-app.use('/api/search', searchRouter)
-app.use('/api/twitter', twitterSearch)
+app.use('/api/search', searchRouter);
+app.use('/api/twitter', twitterSearch);
 app.use('/api/favorite', favoriteRouter);
+app.use('/api/pie', pieRouter);
 
 // Serve static files
 app.use(express.static('build'));
