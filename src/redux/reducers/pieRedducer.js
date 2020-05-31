@@ -1,5 +1,5 @@
 const pieReducer = (state = [], action) => {
-    console.log('in pieReducer', action.type);
+    console.log('in pieReducer', action.payload);
     switch (action.type) {
         case 'PIES':
             return action.payload
