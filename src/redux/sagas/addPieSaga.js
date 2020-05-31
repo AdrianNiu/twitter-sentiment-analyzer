@@ -6,7 +6,7 @@ function* postPieSaga(action) {
     try {
         console.log('In addPieSaga action.payload is', action.payload);
         //Making asyn AJAX (axios) request
-        // yield axios.put(`/api/favorite/notes/${action.payload.id}`, action.payload);
+        yield axios.post(`/api/pie`, action.payload);
         //Request information back from the server after change
         // yield put({ type: 'GET_FAV' });
     } catch (error) {
