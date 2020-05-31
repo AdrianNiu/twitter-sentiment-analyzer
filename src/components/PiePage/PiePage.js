@@ -22,13 +22,15 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 export class PiePage extends Component {
 
     componentDidMount() {
-        this.props.dispatch({ type: 'GET_FAV' });
-        console.log('what is in the fav reducer', this.props.favorites);
-        console.log('what is in the this',this);
+        this.props.dispatch({ type: 'GET_PIE' });
+        console.log('what is in the pie reducer', this.props.pie);
+        // console.log('what is in the this',this);
         
     }
 
-    
+    handleShow = event => {
+        console.log('what is in the pie reducer', this.props.pie);
+    }
 
     render() {
 
@@ -110,7 +112,7 @@ export class PiePage extends Component {
                                 <td>{this.props.favorite.sentiment}</td>
                                 <td>{this.props.favorite.sentiment_score}</td>
                                 <td>{this.props.favorite.sentiment_text}</td> */}
-                                <td><button color="secondary" size="sm">Remove</button></td>
+                                <td><button color="secondary" onClick={this.handleShow} size="sm">Remove</button></td>
                             </tr>
 
                         </tbody>
@@ -128,7 +130,7 @@ export class PiePage extends Component {
 }
 }
 const putPropsOnReduxStore = (reduxState) => ({
-    reduxState,
+    pie: reduxState.pieReducer,
 });
 
 
