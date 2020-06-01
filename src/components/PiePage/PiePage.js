@@ -87,6 +87,29 @@ export class PiePage extends Component {
                                 <th>Remove</th>
                             </tr>
                         </thead>
+                        
+                            {/* insert pie data */}
+                        {this.props.pie.map(pie => {
+                            return (
+                                <>
+                                    <tbody>
+                                        {/* <img src={tweet.images.fixed_height_downsampled.url}></img> */}
+
+                                        <tr>
+                                            <td>{pie.time}</td>
+                                            <td>{pie.keyword}</td>
+                                            <td>{pie.pie}</td>
+                                            {/* <td><button variant="contained" color="primary" onClick={(event) => this.addToFav(tweet)}>Save</button></td> */}
+                                        </tr>
+                                        {/* <p>{JSON.stringify(tweet.counter)}</p> */}
+                                    </tbody>
+                                </>
+
+
+                            );
+                        })}
+                        {/* replace with CANVAS pie component */}
+
                         <tbody>
                             <tr>
                                 {/* <td>{this.props.favorite.id}</td> */}
