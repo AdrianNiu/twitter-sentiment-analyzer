@@ -87,6 +87,7 @@ export class PiePage extends Component {
                                 <th>Remove</th>
                             </tr>
                         </thead>
+                        
                             {/* insert pie data */}
                         {this.props.pie.map(pie => {
                             return (
