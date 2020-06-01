@@ -98,20 +98,16 @@ export class PiePage extends Component {
                                             <td>{pie.time}</td>
                                             <td>{pie.keyword}</td>
                                             <td>{pie.pie}</td>
-                                            
                                             {/* <td><button variant="contained" color="primary" onClick={(event) => this.addToFav(tweet)}>Save</button></td> */}
                                         </tr>
-
                                         {/* <p>{JSON.stringify(tweet.counter)}</p> */}
-
-
                                     </tbody>
                                 </>
 
 
                             );
                         })}
-
+                        {/* replace with CANVAS pie component */}
 
                         <tbody>
                             <tr>
