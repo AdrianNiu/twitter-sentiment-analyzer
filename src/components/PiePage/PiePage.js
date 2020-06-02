@@ -1,6 +1,4 @@
-
-
-
+import { Pie } from 'react-chartjs-2';
 import React, { Component } from 'react';
 //Connect to the redux store
 import { connect } from 'react-redux';
@@ -13,6 +11,8 @@ import { Table, Button } from 'reactstrap';
 import CanvasJSReact from '../../assets/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 // import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
+
 
 
 
@@ -36,7 +36,6 @@ export class PiePage extends Component {
 
         // if (this.props.reduxStore.searchReducer.length > 0) {
             if (1<2) {
-
             // Canvas component
             const options = {
                 theme: "light1",
@@ -55,15 +54,41 @@ export class PiePage extends Component {
                     indexLabelFontSize: 16,
                     indexLabel: "{label} - {y}%",
                     dataPoints: [
-                        // { y: 32, label: "Health" },
-                        // { y: 22, label: "Finance" },
-                        // { y: 15, label: "Education" },
+                        { y: 32, label: "Health" },
+                        { y: 22, label: "Finance" },
+                        { y: 15, label: "Education" },
                         // { y: 0, label: "Neutral" },
                         // { y: 0, label: "Negative" },
                         // { y: 0, label: "Positive" }
                     ]
                 }]
             }
+
+                const pieData = {
+                    labels: ['January', 'February', 'March',
+                        'April', 'May'],
+                    datasets: [
+                        {
+                            label: 'Rainfall',
+                            backgroundColor: [
+                                '#B21F00',
+                                '#C9DE00',
+                                '#2FDE00',
+                                '#00A6B4',
+                                '#6800B4'
+                            ],
+                            hoverBackgroundColor: [
+                                '#501800',
+                                '#4B5000',
+                                '#175000',
+                                '#003350',
+                                '#35014F'
+                            ],
+                            data: [65, 59, 80, 81, 56]
+                        }
+                    ]
+                }
+                
         
         
         return (
@@ -80,6 +105,7 @@ export class PiePage extends Component {
                                 <th>Keyword</th>
                                 {/* <th></th> */}
                                 <th>Chart</th>
+                                <th></th>
                                 <th>Notes</th>
                                 {/* <th>Sentiment</th>
                                 <th>Score</th>
@@ -93,12 +119,29 @@ export class PiePage extends Component {
                                 <>
                                     <tbody>
                                         {/* <img src={tweet.images.fixed_height_downsampled.url}></img> */}
-
                                         <tr>
                                             <td>{pie.time}</td>
                                             <td>{pie.keyword}</td>
-                                            <td>{pie.pie}</td>
+                                            <td>
+                                                {/* {pie.pie} */}
+                                            <div style={{ height: 400, width: 600 }}>
+                                                    <Pie
+                                                        data={pieData}
+                                                        options={{
+                                                            title: {
+                                                                display: true,
+                                                                text: pie.keyword,
+                                                                fontSize: 20
+                                                            },
+                                                            legend: {
+                                                                display: true,
+                                                                position: 'right'
+                                                            }
+                                                        }}
+                                                    />      
+                                            </div></td>
                                             <td><Button color="secondary" size="sm">Note</Button></td>
+                                            <td></td>
                                             <td><Button color="secondary" onClick={this.handleShow} size="sm">Remove</Button></td>
                                             {/* <td><button variant="contained" color="primary" onClick={(event) => this.addToFav(tweet)}>Save</button></td> */}
                                         </tr>
