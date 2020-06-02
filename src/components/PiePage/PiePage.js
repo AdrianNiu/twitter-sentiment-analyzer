@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import FavoriteChart from '../FavoriteChart/FavoriteChart';
 
-import { Table } from 'reactstrap';
+import { Table, Button } from 'reactstrap';
 
 import CanvasJSReact from '../../assets/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
@@ -87,7 +87,6 @@ export class PiePage extends Component {
                                 <th>Remove</th>
                             </tr>
                         </thead>
-                        
                             {/* insert pie data */}
                         {this.props.pie.map(pie => {
                             return (
@@ -99,6 +98,8 @@ export class PiePage extends Component {
                                             <td>{pie.time}</td>
                                             <td>{pie.keyword}</td>
                                             <td>{pie.pie}</td>
+                                            <td><Button color="secondary" size="sm">Note</Button></td>
+                                            <td><Button color="secondary" onClick={this.handleShow} size="sm">Remove</Button></td>
                                             {/* <td><button variant="contained" color="primary" onClick={(event) => this.addToFav(tweet)}>Save</button></td> */}
                                         </tr>
                                         {/* <p>{JSON.stringify(tweet.counter)}</p> */}
@@ -108,7 +109,7 @@ export class PiePage extends Component {
 
                             );
                         })}
-                        {/* replace with CANVAS pie component */}
+                        {/* replace with CANVAS pie */}
 
                         <tbody>
                             <tr>
