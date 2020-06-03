@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
     const queryText = `INSERT INTO sentiment_pie ("pie", "keyword", "time")
                     VALUES ($1, $2, $3)`;
     const queryValues = [
-        fav_pie.saved_pie,
+        [fav_pie.saved_pie],
         fav_pie.keyword,
         dateTime,
     ];
