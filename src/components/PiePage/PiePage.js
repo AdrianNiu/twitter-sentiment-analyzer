@@ -29,8 +29,13 @@ export class PiePage extends Component {
     }
 
     handleShow = event => {
+        const propertyValues = Object.keys(this.props.pie[0].pie);
         console.log('what is in the pie reducer', this.props.pie);
+        console.log('What is in the object.values:', propertyValues);
+        
     }
+
+    
 
     render() {
 
