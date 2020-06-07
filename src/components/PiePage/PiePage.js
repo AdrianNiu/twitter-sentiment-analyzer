@@ -8,11 +8,6 @@ import FavoriteChart from '../FavoriteChart/FavoriteChart';
 
 import { Table, Button } from 'reactstrap';
 
-import CanvasJSReact from '../../assets/canvasjs.react';
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
-// import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-
-
 
 
 
