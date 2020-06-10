@@ -12,13 +12,6 @@ import CanvasJSReact from '../../assets/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 // import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-
-
-
-
-
-
-
 export class PiePage extends Component {
 
     componentDidMount() {
@@ -206,5 +199,5 @@ const putPropsOnReduxStore = (reduxState) => ({
 });
 
 
-
+// need to update the pie reducer
 export default withRouter(connect(putPropsOnReduxStore)(PiePage));
