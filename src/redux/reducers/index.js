@@ -5,6 +5,7 @@ import user from './userReducer';
 import searchReducer from './searchReducer';
 import favoriteReducer from './favoriteReducer';
 import pieReducer from './pieRedducer';
+import pieDataReducer from './pieDataReducer';
 
 
 // rootReducer is the primary reducer for our entire project
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   searchReducer,
   favoriteReducer,
   pieReducer,
+  pieDataReducer,
 });
 
 export default rootReducer;

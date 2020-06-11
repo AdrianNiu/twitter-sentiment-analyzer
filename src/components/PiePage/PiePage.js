@@ -16,14 +16,11 @@ export class PiePage extends Component {
 
     componentDidMount() {
         this.props.dispatch({ type: 'GET_PIE' });
-        console.log('what is in the pie reducer', this.props.pie);
-        // console.log('what is in the this',this);
-        
     }
 
     handleShow = event => {
-        const propertyValues = Object.keys(this.props.pie[0].pie);
-        console.log('what is in the pie reducer', this.props.pie);
+        const propertyValues = Object.values(this.props.pie[0].pie);
+        console.log('what is in the pie reducer', this.props.pie[0].pie);
         console.log('What is in the object.values:', propertyValues);
         
     }
@@ -31,37 +28,8 @@ export class PiePage extends Component {
     
 
     render() {
-
         // if (this.props.reduxStore.searchReducer.length > 0) {
             if (1<2) {
-            // Canvas component
-            const options = {
-                theme: "light1",
-                animationEnabled: true,
-                exportFileName: "Sentiment Result",
-                exportEnabled: true,
-                title: {
-                    text: "Sentiment Analysis Result"
-                },
-                data: [{
-                    type: "pie",
-                    startAngle: 75,
-                    toolTipContent: "<b>{label}</b>: {y}%",
-                    showInLegend: "true",
-                    legendText: "{label}",
-                    indexLabelFontSize: 16,
-                    indexLabel: "{label} - {y}%",
-                    dataPoints: [
-                        { y: 32, label: "Health" },
-                        { y: 22, label: "Finance" },
-                        { y: 15, label: "Education" },
-                        // { y: 0, label: "Neutral" },
-                        // { y: 0, label: "Negative" },
-                        // { y: 0, label: "Positive" }
-                    ]
-                }]
-            }
-
                 const pieData = {
                     labels: ['January', 'February', 'March',
                         'April', 'May'],
@@ -137,7 +105,8 @@ export class PiePage extends Component {
                                                             }
                                                         }}
                                                     />      
-                                            </div></td>
+                                            </div>
+                                            </td>
                                             <td><Button color="secondary" size="sm">Note</Button></td>
                                             <td></td>
                                             <td><Button color="secondary" onClick={this.handleShow} size="sm">Remove</Button></td>
@@ -152,35 +121,7 @@ export class PiePage extends Component {
                         })}
                         {/* replace with CANVAS pie */}
 
-                        <tbody>
-                            <tr>
-                                {/* <td>{this.props.favorite.id}</td> */}
-                                <td></td>
-                                <td></td>
-                                <td><div style={{ height: 200, width: 300 }}>
-                                    <CanvasJSChart options={options}
-                                    /* onRef={ref => this.chart = ref} */
-                                    />
-                                </div></td>
-                                <td><button color="secondary" size="sm">Note</button></td>
-                                {/* <td><select id="category" onChange={ (event) => this.handleChange( event )}>
-                                <option></option>
-                                <option value="1">Funny</option>
-                                <option value="2">Cohort</option>
-                                <option value="3">Cartoon</option>
-                                <option value="4">NSFW</option>
-                                <option value="5">Meme</option>
-                            </select>
-                            <button onClick={this.handleClick}>Set Category</button>
-                            </td> */}
-                                {/* <td>{this.props.favorite.notes}</td>
-                                <td>{this.props.favorite.sentiment}</td>
-                                <td>{this.props.favorite.sentiment_score}</td>
-                                <td>{this.props.favorite.sentiment_text}</td> */}
-                                <td><button color="secondary" onClick={this.handleShow} size="sm">Remove</button></td>
-                            </tr>
-
-                        </tbody>
+                       
                     </Table>
                 </section>
 
