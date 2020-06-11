@@ -36,6 +36,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     console.log('the PieChart req body is:', req.body)
     const fav_pie = req.body;
+    var pieData = [];
     console.log('TIME!!!', dateTime);
 
     var today = new Date();
@@ -46,7 +47,7 @@ router.post('/', (req, res) => {
     const queryText = `INSERT INTO sentiment_pie ("pie", "keyword", "time")
                     VALUES ($1, $2, $3)`;
     const queryValues = [
-        [fav_pie.saved_pie],
+        fav_pie.saved_pie,
         fav_pie.keyword,
         dateTime,
     ];
