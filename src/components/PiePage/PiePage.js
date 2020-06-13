@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 //Import to do routing
 import { withRouter } from 'react-router-dom';
-import FavoriteChart from '../FavoriteChart/FavoriteChart';
 
 import { Table, Button } from 'reactstrap';
 

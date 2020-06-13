@@ -4,8 +4,6 @@ import { connect } from "react-redux";
 // import Button from '@material-ui/core/Button';
 import { InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
 import './SearchPage.css';
-import { Pie } from "react-chartjs-2";
-import { MDBContainer } from "mdbreact";
 
 import { Jumbotron} from 'reactstrap';
 
