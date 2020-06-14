@@ -1,29 +1,25 @@
-
 import React, { Component } from 'react';
 //Connect to the redux store
 import { connect } from 'react-redux';
 //Import to do routing
 import { withRouter } from 'react-router-dom';
 
-import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+// When using the { } for including the component, it will show this.props.dispatch not a function
+import FavoritePie from '../FavoritePie/FavoritePie';
+
+// import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Table, Button } from 'reactstrap';
 
-import CanvasJSReact from '../../assets/canvasjs.react';
 
-import { FavoritePie } from '../FavoritePie/FavoritePie';
 
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
 export class PiePage extends Component {
-
     
 
     componentDidMount() {
         this.props.dispatch({ type: 'GET_PIE' });
     }
-
-    
 
     render() {
         // if (this.props.reduxStore.searchReducer.length > 0) {
@@ -52,25 +48,20 @@ export class PiePage extends Component {
                             </tr>
                         </thead>
                             
-                        {this.props.pie.map(pie => 
+                        {this.props.pies.map(pie => 
                             <FavoritePie key={pie.id} pie={pie} />
                         )}
                          
                     </Table>
                 </section>
 
-                <section className="favorites">
-                    {/* {JSON.stringify(this.props.reduxStore.favourites)} */}
-                    {/* {JSON.stringify(this.props.favorites)} */}
-                    
-                </section>
             </>
         )
     }
 }
 }
 const putPropsOnReduxStore = (reduxState) => ({
-    pie: reduxState.pieReducer,
+    pies: reduxState.pieReducer,
 });
 
 

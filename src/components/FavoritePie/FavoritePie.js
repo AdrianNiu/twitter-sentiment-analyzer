@@ -16,7 +16,7 @@ export class FavoritePie extends Component {
         // const propertyValues = Object.values(this.props.pie[0]);
         console.log('what is in the pie reducer', id);
         // console.log('What is in the object.values:', propertyValues);
-        this.props.dispatch({ type: 'DELETE_PIE', payload: id })
+        this.props.dispatch({ type: 'DELETE_PIE', payload: id });
     }
 
     setIsOpen = () => {
@@ -25,6 +25,7 @@ export class FavoritePie extends Component {
     }
 
     handleChangeFor = (event) => {
+        console.log('What is in the note', event.target.value);
         this.setState({
             notes: event.target.value
         });
@@ -47,7 +48,7 @@ export class FavoritePie extends Component {
             <>
                 <tbody>
                     {/* <img src={tweet.images.fixed_height_downsampled.url}></img> */}
-                    <tr>
+                    <tr key={this.props.pie.id}>
                         <td>{this.props.pie.time}</td>
                         <td>{this.props.pie.keyword}</td>
                         <td>
