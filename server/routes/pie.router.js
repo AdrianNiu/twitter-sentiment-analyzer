@@ -104,13 +104,13 @@ router.put('/notes/:id', (req, res) => {
 
 
 
-// delete a favorite
+// delete a saved pie
 router.delete('/:id', (req, res) => {
     const id = req.params.id;
 
     console.log(`In delete `, id)
 
-    const queryText = `DELETE FROM sentiment_result WHERE id = ($1)`
+    const queryText = `DELETE FROM sentiment_pie WHERE id = ($1)`
     const queryValues = [
         id
     ]

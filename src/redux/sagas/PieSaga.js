@@ -14,7 +14,16 @@ function* postPieSaga(action) {
     }
 }
 
-
+function* deletePieSaga(action) {
+    console.log('in deletePieSaga', action);
+    try {
+        const response = yield axios.delete(`/api/pie/${action.payload}`);
+        yield put({ type: 'GET_PIE'})
+    }
+    catch (error) {
+        console.log('Error with PIES GET', error);
+    }
+}
 
 function* getPieSaga(action) {
     console.log('in getPieSaga', action);
@@ -28,10 +37,10 @@ function* getPieSaga(action) {
     }
 }
 
-function* addPieSaga() {
+function* PieSaga() {
     yield takeLatest('SAVE_PIE', postPieSaga);
-    // yield takeLatest('NEW_PIE', newPieSaga);
+    yield takeLatest('DELETE_PIE', deletePieSaga);
     yield takeLatest('GET_PIE', getPieSaga);
 }
 
-export default addPieSaga;
+export default PieSaga;
