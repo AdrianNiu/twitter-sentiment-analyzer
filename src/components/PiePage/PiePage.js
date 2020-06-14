@@ -18,9 +18,10 @@ export class PiePage extends Component {
     }
 
     handleShow = event => {
-        const propertyValues = Object.values(this.props.pie[0].pie);
-        console.log('what is in the pie reducer', this.props.pie[0].pie);
-        console.log('What is in the object.values:', propertyValues);
+        // const propertyValues = Object.values(this.props.pie[0]);
+        console.log('what is in the pie reducer', this.props.pie);
+        // console.log('What is in the object.values:', propertyValues);
+        
         
     }
 
@@ -29,30 +30,7 @@ export class PiePage extends Component {
     render() {
         // if (this.props.reduxStore.searchReducer.length > 0) {
             if (1<2) {
-                const pieData = {
-                    labels: ['January', 'February', 'March',
-                        'April', 'May'],
-                    datasets: [
-                        {
-                            label: 'Rainfall',
-                            backgroundColor: [
-                                '#B21F00',
-                                '#C9DE00',
-                                '#2FDE00',
-                                '#00A6B4',
-                                '#6800B4'
-                            ],
-                            hoverBackgroundColor: [
-                                '#501800',
-                                '#4B5000',
-                                '#175000',
-                                '#003350',
-                                '#35014F'
-                            ],
-                            data: [65, 59, 80, 81, 56]
-                        }
-                    ]
-                }
+                
                 
         
         
@@ -91,7 +69,27 @@ export class PiePage extends Component {
                                                 {/* {pie.pie} */}
                                             <div style={{ height: 400, width: 600 }}>
                                                     <Pie
-                                                        data={pieData}
+                                                        data={{
+                                                            labels: ['Negative', 'Neutral', 'Positive'],
+                                                            datasets: [
+                                                                {
+                                                                    label: 'Rainfall',
+                                                                    backgroundColor: [
+                                                                        '#B21F00',
+                                                                        '#C9DE00',
+                                                                        '#2FDE00',
+
+                                                                    ],
+                                                                    hoverBackgroundColor: [
+                                                                        '#501800',
+                                                                        '#4B5000',
+                                                                        '#175000',
+
+                                                                    ],
+                                                                    data: [pie.pie_negative, pie.pie_neutral, pie.pie_positive]
+                                                                }
+                                                            ]
+                                                        }}
                                                         options={{
                                                             title: {
                                                                 display: true,
