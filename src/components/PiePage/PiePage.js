@@ -73,11 +73,11 @@ export class PiePage extends Component {
                                                             labels: ['Negative', 'Neutral', 'Positive'],
                                                             datasets: [
                                                                 {
-                                                                    label: 'Rainfall',
+                                                                    label: pie.keyword,
                                                                     backgroundColor: [
-                                                                        '#B21F00',
-                                                                        '#C9DE00',
-                                                                        '#2FDE00',
+                                                                        '#c0504e',
+                                                                        '#5082bc',
+                                                                        '#9aba58',
 
                                                                     ],
                                                                     hoverBackgroundColor: [
