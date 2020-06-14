@@ -17,12 +17,11 @@ export class PiePage extends Component {
         this.props.dispatch({ type: 'GET_PIE' });
     }
 
-    handleShow = event => {
+    handleDelete = (id) => {
         // const propertyValues = Object.values(this.props.pie[0]);
-        console.log('what is in the pie reducer', this.props.pie);
+        console.log('what is in the pie reducer', id);
         // console.log('What is in the object.values:', propertyValues);
-        
-        
+        this.props.dispatch({ type: 'DELETE_PIE', payload: id })
     }
 
     
@@ -106,7 +105,7 @@ export class PiePage extends Component {
                                             </td>
                                             <td><Button color="secondary" size="sm">Note</Button></td>
                                             <td></td>
-                                            <td><Button color="secondary" onClick={this.handleShow} size="sm">Remove</Button></td>
+                                            <td><Button color="secondary" onClick={(event) => this.handleDelete (pie.id)} size="sm">Remove</Button></td>
                                             {/* <td><button variant="contained" color="primary" onClick={(event) => this.addToFav(tweet)}>Save</button></td> */}
                                         </tr>
                                         {/* <p>{JSON.stringify(tweet.counter)}</p> */}

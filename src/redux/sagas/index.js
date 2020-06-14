@@ -4,7 +4,7 @@ import registrationSaga from './registrationSaga';
 import userSaga from './userSaga';
 import searchSaga from './searchSaga';
 import addNoteSaga from './addNoteSaga';
-import addPieSaga from './addPieSaga';
+import PieSaga from './PieSaga';
 
 
 
@@ -22,7 +22,7 @@ export default function* rootSaga() {
     userSaga(),
     searchSaga(),
     addNoteSaga(),
-    addPieSaga(),
+    PieSaga(),
   ]);
 }
 
