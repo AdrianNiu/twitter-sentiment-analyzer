@@ -17,9 +17,8 @@ function* postPieSaga(action) {
 function* deletePieSaga(action) {
     console.log('in deletePieSaga', action);
     try {
-        const response = yield axios.delete('/api/pie');
-        console.log('Heres the DELETE response for /api/pie', response.data);
-        yield put({ type: 'PIES', payload: response.data })
+        const response = yield axios.delete(`/api/pie/${action.payload}`);
+        yield put({ type: 'GET_PIE'})
     }
     catch (error) {
         console.log('Error with PIES GET', error);
