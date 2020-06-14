@@ -5,13 +5,19 @@ import { connect } from 'react-redux';
 //Import to do routing
 import { withRouter } from 'react-router-dom';
 
+import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Table, Button } from 'reactstrap';
 
 import CanvasJSReact from '../../assets/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
-// import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
 
 export class PiePage extends Component {
+
+    state = {
+        isOpen: false,
+        notes: this.props.pie.notes
+    }
 
     componentDidMount() {
         this.props.dispatch({ type: 'GET_PIE' });
@@ -24,15 +30,30 @@ export class PiePage extends Component {
         this.props.dispatch({ type: 'DELETE_PIE', payload: id })
     }
 
+    setIsOpen = () => {
+        this.setState({ isOpen: !this.state.isOpen });
+        console.log('In setIsOpen');
+    }
+
+    handleChangeFor = (event) => {
+        this.setState({
+            notes: event.target.value
+        });
+    }
+
+    handleSubmitNote = (id) => {
+        //Sends a dispatch to update the notes that were added.
+        console.log('In Sending to PIE_NOTES');
+        this.props.dispatch({ type: 'PIE_NOTES', payload: { id: id, notes: this.state.notes } });
+        //Closes the modal once you hit save;
+        this.setIsOpen();
+    }
     
 
     render() {
         // if (this.props.reduxStore.searchReducer.length > 0) {
             if (1<2) {
                 
-                
-        
-        
         return (
             <>
                 {/* <p>PiePage</p> */}
@@ -103,8 +124,30 @@ export class PiePage extends Component {
                                                     />      
                                             </div>
                                             </td>
-                                            <td><Button color="secondary" size="sm">Note</Button></td>
-                                            <td></td>
+                                            <td><Button color="secondary" size="sm" onClick={() => this.setIsOpen()}>Note</Button>
+                                            {this.state.isOpen ? (
+                                                <div>
+                                                    <div>
+                                                        <article>
+                                                            <FormGroup>
+                                                                {/* <Label for="exampleText">Notes</Label> */}
+                                                                <hr />
+                                                                <Input type="textarea" name="text" id="exampleText"
+                                                                    spellCheck="true"
+                                                                    value={this.state.notes || ''}
+                                                                    onChange={(event) => this.handleChangeFor(event)} />
+                                                            </FormGroup>
+                                                        </article>
+                                                        <Button onClick={(event)=>this.handleSubmitNote(pie.id)} color="secondary" size="sm">Save</Button>
+                    
+                                                        {"       "}
+                                                        <Button onClick={() => this.setIsOpen()} color="secondary" size="sm">Cancel</Button>
+                                                        
+                                                    </div>
+                                                </div>
+                                            ) : null}
+                                            </td>
+                                            <td>{pie.notes}</td>
                                             <td><Button color="secondary" onClick={(event) => this.handleDelete (pie.id)} size="sm">Remove</Button></td>
                                             {/* <td><button variant="contained" color="primary" onClick={(event) => this.addToFav(tweet)}>Save</button></td> */}
                                         </tr>
