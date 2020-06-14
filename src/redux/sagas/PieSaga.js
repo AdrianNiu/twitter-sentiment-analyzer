@@ -37,10 +37,23 @@ function* getPieSaga(action) {
     }
 }
 
+function* putPieSaga(action) {
+    try {
+        console.log('putPieSaga action.payload is', action.payload);
+        //Making asyn AJAX (axios) request
+        yield axios.put(`/api/pie/notes/${action.payload.id}`, action.payload);
+        //Request information back from the server after change
+        yield put({ type: 'GET_PIE' });
+    } catch (error) {
+        console.log('error with put request for adding notes', error);
+    }
+}
+
 function* PieSaga() {
     yield takeLatest('SAVE_PIE', postPieSaga);
     yield takeLatest('DELETE_PIE', deletePieSaga);
     yield takeLatest('GET_PIE', getPieSaga);
+    yield takeLatest('PIE_NOTES', putPieSaga);
 }
 
 export default PieSaga;

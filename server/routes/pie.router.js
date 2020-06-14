@@ -83,25 +83,6 @@ router.put('/:favId', (req, res) => {
         })
 });
 
-//add note router
-router.put('/notes/:id', (req, res) => {
-    let notes = req.body.notes;
-    let id = req.params.id;
-    console.log('In Notes Router');
-
-    //Updates the speech_info table on the notes field
-    const queryText = `
-                        UPDATE sentiment_result 
-                        SET notes = $1
-                        WHERE id = $2;`;
-    pool.query(queryText, [notes, id]).then((result) => {
-        res.sendStatus(204);
-    }).catch((error) => {
-        console.log(`Error on query ${error}`);
-        res.sendStatus(500);
-    });
-});
-
 
 
 // delete a saved pie
@@ -120,6 +101,25 @@ router.delete('/:id', (req, res) => {
             console.log('Error completing put category', err);
             res.sendStatus(500)
         })
+});
+
+//add note router
+router.put('/notes/:id', (req, res) => {
+    let notes = req.body.notes;
+    let id = req.params.id;
+    console.log('In Notes Router, the PIE one!');
+
+    //Updates the speech_info table on the notes field
+    const queryText = `
+                        UPDATE sentiment_pie 
+                        SET notes = $1
+                        WHERE id = $2;`;
+    pool.query(queryText, [notes, id]).then((result) => {
+        res.sendStatus(204);
+    }).catch((error) => {
+        console.log(`Error on query ${error}`);
+        res.sendStatus(500);
+    });
 });
 
 module.exports = router;
