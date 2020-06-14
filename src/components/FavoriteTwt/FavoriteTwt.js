@@ -126,27 +126,7 @@ export class FavoriteTwt extends Component {
                 
             
 
-            {/* <div>
-                <h1>{this.props.favorite.time}</h1>
-                <h1>{this.props.favorite.id}</h1>
-                <img src={this.props.favorite.URL} alt="FavGif" />
-                {JSON.stringify(this.props.favorite)}
-                <button onClick={(event) => this.delete(this.props.favorite.id)}>Remove</button>
-                <div className="category">
-                    {this.setCategory(this.props.favorite.name)}
-                    <label htmlFor="category"><button onClick={this.handleClick}>Set Category</button></label>
-                    <select id="category" onChange={(event) => this.handleChange(event)}>
-                        <option></option>
-                        <option value="1">Funny</option>
-                        <option value="2">Cohort</option>
-                        <option value="3">Cartoon</option>
-                        <option value="4">NSFW</option>
-                        <option value="5">Meme</option>
-
-                    </select>
-                    
-                </div>
-            </div> */}
+           
             </>
         )
     }
