@@ -62,7 +62,6 @@ class SearchPage extends Component {
     swal("Successful!", "You have saved the pie chart!");
     console.log('In Handle Save Pie Button', event);
     this.props.dispatch({ type: "SAVE_PIE", payload: {saved_pie: this.props.reduxState.searchReducer[this.props.reduxState.searchReducer.length - 1].counter, keyword: this.state.search} })
-    this.props.dispatch({ type: "PIE_DATA", payload: { saved_pie: this.props.reduxState.searchReducer[this.props.reduxState.searchReducer.length - 1].counter, keyword: this.state.search } })
 
   };
 

@@ -16,7 +16,7 @@ CREATE TABLE "sentiment_pie" (
 
 // return all favorite images
 router.get('/', (req, res) => {
-    const queryText = `SELECT "sentiment_pie"."id" ,"sentiment_pie"."pie", "sentiment_pie"."notes", "sentiment_pie"."keyword", "sentiment_pie"."time" FROM "sentiment_pie" order by "sentiment_pie"."id"`;
+    const queryText = `SELECT * FROM "sentiment_pie" order by "sentiment_pie"."id"`;
     pool.query(queryText)
         .then((result) => {
             console.log('Get PIE on server', result.rows);
@@ -44,10 +44,12 @@ router.post('/', (req, res) => {
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     var dateTime = date + ' ' + time;
 
-    const queryText = `INSERT INTO sentiment_pie ("pie", "keyword", "time")
-                    VALUES ($1, $2, $3)`;
+    const queryText = `INSERT INTO sentiment_pie ("pie_negative", "pie_neutral", "pie_positive", "keyword", "time")
+                    VALUES ($1, $2, $3, $4, $5)`;
     const queryValues = [
-        fav_pie.saved_pie,
+        fav_pie.saved_pie[0].toFixed(2),
+        fav_pie.saved_pie[1].toFixed(2),
+        fav_pie.saved_pie[2].toFixed(2),
         fav_pie.keyword,
         dateTime,
     ];

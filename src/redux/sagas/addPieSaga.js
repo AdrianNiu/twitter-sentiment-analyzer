@@ -14,16 +14,7 @@ function* postPieSaga(action) {
     }
 }
 
-// function* newPieSaga(action) {
-//     try {
-//         console.log('In NewPieSaga!!!! action.payload is', action.payload);
-//         //Making asyn AJAX (axios) request
-//         //Request information back from the server after change
-//         yield put({ type: 'PIE_DATA', payload: action.payload });
-//     } catch (error) {
-//         console.log('error with put request for adding pies', error);
-//     }
-// }
+
 
 function* getPieSaga(action) {
     console.log('in getPieSaga', action);
