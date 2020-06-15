@@ -22,7 +22,8 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
 const mapStateToProps = reduxState => ({
-  reduxState
+  reduxState,
+  user: reduxState.user,
 });
 
 class SearchPage extends Component {
@@ -198,7 +199,7 @@ class SearchPage extends Component {
           <div>
             <Jumbotron>
               <h1 className="display-3">Twitter Sentiment Analyzer</h1>
-              <p className="lead">Type in any hashtag or keyword and press enter to visualize Tweet Sentiment.</p>
+              <p className="lead">{this.props.user.username} Type in any hashtag or keyword and press enter to visualize Tweet Sentiment.</p>
               <hr className="my-2" />
               <p>This tool can help business to monitor and understand the social sentiment of their brand, product or services. </p>
               <p className="lead">
