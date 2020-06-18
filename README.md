@@ -17,7 +17,7 @@ Below is the result of the application, you can type in your brand name or somet
 ![View of the Search Page](/public/images/TSA-search-page.jpg)
 ![View of the tweeter sentiment pie chart](/public/images/TSA-search-result-page1.jpg)
 ![View of the tweets of keyword searched](/public/images/TSA-search-result-page2.jpg)
-![View of a Chart Page consisting of saved charts](/public/images/TSA-chart-page.)
+![View of a Chart Page consisting of saved charts](/public/images/TSA-chart-page.jpg)
 ![View of the saved Twitter page](/public/images/TSA-tweet-result-page.jpg)
 
 
@@ -40,6 +40,19 @@ Before you get started, make sure you have the following software installed on y
 5. Run `npm run server`
 6. Run `npm run client`
 7. Running the two previous commands will open a web browser with the application
+
+
+## Usage
+
+1. Login with your username and password or navigate to the Register page to set up an account with your username and password.
+2. Users can access the "About" page whether or not the user is logged in. The "About" page provides overview information on the twitter sentiment analyzer.
+3. In the main search page or home page, user can type in the keyword or hashtag they are interested to obtain the most recent tweets and generate sentiment visualization results.
+4. The search result returns the most recent 15 tweets from tweeter API and compute the sentiment score based on AFINN Sentiment Lexicon.
+5. After the user complete a search, user can save the pie chart and view it later in the chart page. Users can also save a specific tweets of their interest and view it later in the result page.
+6. Under the chart page, user will be able to view the saved sentiment result with time stamp and keyword searched. User can add/edit note on a specific saved pie chart.
+7. Under the result page, user will be able to view the saved tweets, timestamp, keyword, sentiment score and notes. User can also add/edit note on a specific saved tweet.
+8. Clicking "Delete" on any specific pie chart or tweet will remove it from the page with popped confirmation.
+9. By cliicking on the search button or home button, user will be direct back to the search interface to complete a new search. 
 
 
 
