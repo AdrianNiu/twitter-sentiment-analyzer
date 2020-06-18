@@ -13,7 +13,7 @@ The AFINN lexicon is a list of English terms manually rated for valence with an 
 
 ## Screen Shots
 
-Below is the result of the application, you can type in your brand name or something you are interested in, and see how people are talking about it on Twitter.
+Below is the result of the application, you can type in your brand name or something you are interested in, and see how people are talking about it on Twitter. In the demo, the user is an admin from Verizon, and the admin is interested in learning how people think about his/her brand and services. 
 ![View of the Search Page](/public/images/TSA-search-page.jpg)
 ![View of the tweeter sentiment pie chart](/public/images/TSA-search-result-page1.jpg)
 ![View of the tweets of keyword searched](/public/images/TSA-search-result-page2.jpg)
