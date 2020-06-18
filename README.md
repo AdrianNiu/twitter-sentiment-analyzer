@@ -14,9 +14,11 @@ The AFINN lexicon is a list of English terms manually rated for valence with an 
 ## Screen Shots
 
 Below is the result of the application, you can type in your brand name or something you are interested in, and see how people are talking about it on Twitter.
-![View of the Search Page](/public/images/phases-page-view.png)
-![View of a Chart Page](/public/images/step-view.png)
-![View of the saved Twitter page](/public/images/search-functionality.png)
+![View of the Search Page](/public/images/TSA-search-page.jpg)
+![View of the tweeter sentiment pie chart](/public/images/TSA-search-result-page1.jpg)
+![View of the tweets of keyword searched](/public/images/TSA-search-result-page2.jpg)
+![View of a Chart Page consisting of saved charts](/public/images/TSA-chart-page.)
+![View of the saved Twitter page](/public/images/TSA-tweet-result-page.jpg)
 
 
 ## Prerequisites
