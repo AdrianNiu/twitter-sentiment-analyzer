@@ -54,7 +54,7 @@ export class FavoriteTwt extends Component {
 
     handleSubmitNote = () => {
         //Sends a dispatch to update the notes that were added.
-        this.props.dispatch({ type: 'PIE_NOTES', payload: { id: this.props.pie.id, notes: this.state.notes } });
+        this.props.dispatch({ type: 'PUT_NOTES', payload: { id: this.props.favorite.id, notes: this.state.notes } });
         //Closes the modal once you hit save;
         this.setIsOpen();
     }
