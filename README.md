@@ -17,9 +17,13 @@ Below is the result of the application, you can type in your brand name or somet
 
 In the demo, the user is an admin from Verizon, and the admin is interested in learning how people think about his/her brand and services. 
 ![View of the Search Page](/public/images/TSA-search-page.jpg)
+
 ![View of the tweeter sentiment pie chart](/public/images/TSA-search-result-page1.jpg)
+
 ![View of the tweets of keyword searched](/public/images/TSA-search-result-page2.jpg)
+
 ![View of a Chart Page consisting of saved charts](/public/images/TSA-chart-page.jpg)
+
 ![View of the saved Twitter page](/public/images/TSA-tweet-result-page.jpg)
 
 
