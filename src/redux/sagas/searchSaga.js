@@ -1,6 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { takeEvery, put } from 'redux-saga/effects';
-import { Provider } from 'react-redux';
 import axios from 'axios';
 import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
