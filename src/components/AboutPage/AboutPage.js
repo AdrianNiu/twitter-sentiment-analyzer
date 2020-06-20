@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 // import { withStyles } from '@material-ui/core/styles';
 // import Button from '@material-ui/core/Button';
 
-import { Pie } from "react-chartjs-2";
-import { MDBContainer } from "mdbreact";
 
 import { Jumbotron } from 'reactstrap';
 import { InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
