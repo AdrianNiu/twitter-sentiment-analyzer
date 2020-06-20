@@ -54,7 +54,10 @@ class SearchPage extends Component {
     event.preventDefault();
     console.log('after clicking the submit, the search in the state',this.state.search);
     this.props.dispatch({ type: "GET_TWT", payload: this.state.search });
-    this.state.hasSearched = true;
+    // this.state.hasSearched = true;
+    this.setState({
+      hasSearched: true
+    })
     
   };
 
