@@ -84,7 +84,7 @@ class AboutPage extends Component {
                 return (
                   <>
                     <li>
-                      <img src={giphy.images.fixed_height_downsampled.url}></img>
+                      {/* <img alt="giphy image?" src={giphy.images.fixed_height_downsampled.url}></img> */}
                       <button variant="contained" color="primary" onClick={(event) => this.addToFav(giphy.images.fixed_height_downsampled.url)}>Save</button>
                     </li>
                   </>
