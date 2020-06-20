@@ -30,7 +30,10 @@ class AboutPage extends Component {
     event.preventDefault();
     console.log(this.state.search);
     this.props.dispatch({ type: "GET_GIF", payload: this.state.search });
-    this.state.hasSearched = true;
+    // this.state.hasSearched = true;
+    this.setState({
+      hasSearched: true
+    })
   };
 
   // addToFav = (url) => {
