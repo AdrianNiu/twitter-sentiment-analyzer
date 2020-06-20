@@ -173,7 +173,7 @@ class SearchPage extends Component {
                       <td>{tweet.tweet}</td>
                       <td>{tweet.sentiment}</td>
                       <td>{tweet.score}</td>
-                      <td><Button variant="contained" color="primary" onClick={(event) => this.addToFav(tweet)} color="secondary" size="sm">Save</Button></td>
+                      <td><Button variant="contained" onClick={(event) => this.addToFav(tweet)} color="secondary" size="sm">Save</Button></td>
                       {/* <td><button variant="contained" color="primary" onClick={(event) => this.addToFav(tweet)}>Save</button></td> */}
                     </tr>
                     
