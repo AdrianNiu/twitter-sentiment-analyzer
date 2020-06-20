@@ -8,7 +8,7 @@ import { withRouter } from 'react-router-dom';
 import FavoritePie from '../FavoritePie/FavoritePie';
 
 // import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { Table, Button } from 'reactstrap';
+import { Table } from 'reactstrap';
 
 
 

@@ -1,10 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { takeEvery, put } from 'redux-saga/effects';
-import { Provider } from 'react-redux';
 import axios from 'axios';
 import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
-import { HashRouter as Router } from 'react-router-dom';
+
 
 
 const searchReducer = (state = [], action) => {
@@ -98,7 +97,7 @@ function* postFavoriteSaga(action) {
         yield put({ type: 'GET_FAV' });
     }
     catch (error) {
-        console.log('Error on POST', error);
+        console.log('Error on POST', error, store);
     }
 }
 

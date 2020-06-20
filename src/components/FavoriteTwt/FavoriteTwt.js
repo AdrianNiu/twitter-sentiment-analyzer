@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //Connect to the redux store
 import { connect } from 'react-redux';
 // import './FavoriteTwt.css';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, FormGroup, Input } from 'reactstrap';
 
 export class FavoriteTwt extends Component {
 

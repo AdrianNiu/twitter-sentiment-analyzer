@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 // import { withStyles } from '@material-ui/core/styles';
 // import Button from '@material-ui/core/Button';
 
-import { Pie } from "react-chartjs-2";
-import { MDBContainer } from "mdbreact";
 
 import { Jumbotron } from 'reactstrap';
 import { InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
@@ -32,7 +30,10 @@ class AboutPage extends Component {
     event.preventDefault();
     console.log(this.state.search);
     this.props.dispatch({ type: "GET_GIF", payload: this.state.search });
-    this.state.hasSearched = true;
+    // this.state.hasSearched = true;
+    this.setState({
+      hasSearched: true
+    })
   };
 
   // addToFav = (url) => {
@@ -83,7 +84,7 @@ class AboutPage extends Component {
                 return (
                   <>
                     <li>
-                      <img src={giphy.images.fixed_height_downsampled.url}></img>
+                      {/* <img alt="giphy image?" src={giphy.images.fixed_height_downsampled.url}></img> */}
                       <button variant="contained" color="primary" onClick={(event) => this.addToFav(giphy.images.fixed_height_downsampled.url)}>Save</button>
                     </li>
                   </>
