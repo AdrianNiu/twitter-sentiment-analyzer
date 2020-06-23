@@ -127,7 +127,9 @@ class SearchPage extends Component {
               </InputGroup>
             </div>
             <br/>
-          <table><tr>
+          <table>
+            <tbody>
+            <tr>
             
             <th><div style={{ height: 400, width: 600 }}>
               <CanvasJSChart options={options}
@@ -135,17 +137,10 @@ class SearchPage extends Component {
               />
           </div> </th>
           
-          {/* <th>
-              <div style={{ height: 400, width: 600 }}>
-                <ReactWordcloud words={words} />
-              </div>
-          </th> */}
-            <div>
-              {/* <h1>React Pie Chart with Index Labels Placed Inside</h1> */}
-              
-              {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
-            </div>
-          </tr></table>
+          
+          </tr>
+            </tbody>
+          </table>
           
           {/* button handle submit save chart */}
           <br/>
@@ -166,7 +161,7 @@ class SearchPage extends Component {
             {this.props.reduxState.searchReducer.map(tweet => {
               return (
                 <>
-                  <tbody>
+                  <tbody key={tweet.tweet}>
                     {/* <img src={tweet.images.fixed_height_downsampled.url}></img> */}
 
                     <tr>
