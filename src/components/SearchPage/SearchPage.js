@@ -161,7 +161,7 @@ class SearchPage extends Component {
             {this.props.reduxState.searchReducer.map(tweet => {
               return (
                 <>
-                  <tbody key={tweet.tweet}>
+                  <tbody>
                     {/* <img src={tweet.images.fixed_height_downsampled.url}></img> */}
 
                     <tr>
