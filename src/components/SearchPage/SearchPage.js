@@ -127,7 +127,9 @@ class SearchPage extends Component {
               </InputGroup>
             </div>
             <br/>
-          <table><tr>
+          <table>
+            <tbody>
+            <tr>
             
             <th><div style={{ height: 400, width: 600 }}>
               <CanvasJSChart options={options}
@@ -135,17 +137,10 @@ class SearchPage extends Component {
               />
           </div> </th>
           
-          {/* <th>
-              <div style={{ height: 400, width: 600 }}>
-                <ReactWordcloud words={words} />
-              </div>
-          </th> */}
-            <div>
-              {/* <h1>React Pie Chart with Index Labels Placed Inside</h1> */}
-              
-              {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
-            </div>
-          </tr></table>
+          
+          </tr>
+            </tbody>
+          </table>
           
           {/* button handle submit save chart */}
           <br/>
@@ -205,7 +200,7 @@ class SearchPage extends Component {
               <p className="lead">{this.props.user.username} Type in any hashtag or keyword and press enter to visualize Tweet Sentiment.</p>
               <hr className="my-2" />
               <p>This tool can help business to monitor and understand the social sentiment of their brand, product or services. </p>
-              <p className="lead">
+              
                 <div className="input-form">
                   <br />
                   <br />
@@ -216,7 +211,7 @@ class SearchPage extends Component {
                     </InputGroupAddon>
                   </InputGroup>
                 </div>
-              </p>
+              
             </Jumbotron>
           </div>
           {/* <header><h2>Adrian Niu!</h2></header> */}

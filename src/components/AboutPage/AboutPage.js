@@ -103,7 +103,7 @@ class AboutPage extends Component {
               <p className="lead">Type in any hashtag or keyword and press enter to visualize Tweet Sentiment.</p>
               <hr className="my-2" />
               <p>This tool can help business to monitor and understand the social sentiment of their brand, product or services.</p>
-              <p className="lead">
+              
                 <div className="input-form">
                   <br />
                   <br />
@@ -114,7 +114,7 @@ class AboutPage extends Component {
                     </InputGroupAddon>
                   </InputGroup>
                 </div>
-              </p>
+              
             </Jumbotron>
           </div>
         </>
