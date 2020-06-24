@@ -11,11 +11,11 @@ The Twitter Sentiment Analyzer uses the Twitter API to gather tweets by keyword 
 
 The AFINN lexicon is a list of English terms manually rated for valence with an integer between -5 (negative) and +5 (positive) by Finn Årup Nielsen between 2009 and 2011. 
 
-## Screen Shots
+## Page Views
 
-Below is the result of the application, you can type in your brand name or something you are interested in, and see how people are talking about it on Twitter. 
+Below is the page views of the application, you can type in something you are interested in, and see how people are talking about it on Twitter. 
 
-In the demo, the user is an admin from Verizon, and the admin is interested in learning how people think about his/her brand and services. 
+In this demo, the user is an admin from Verizon, and the admin is interested in learning how people think about his/her brand and services. 
 
 ![View of the Search Page](/public/images/TSA-search-page.jpg)
 View of the Search Page
