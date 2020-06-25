@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import './FavoriteTwt.css';
 import { Button, FormGroup, Input } from 'reactstrap';
+import swal from 'sweetalert';
 
 export class FavoriteTwt extends Component {
 
@@ -28,7 +29,23 @@ export class FavoriteTwt extends Component {
     }
 
     delete = (id) => {
-        this.props.dispatch({ type: 'DELETE_FAV', payload: id })
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this tweet!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("Poof! Your saved tweet has been deleted!", {
+                        icon: "success",   
+                    });
+                    this.props.dispatch({ type: 'DELETE_FAV', payload: id })
+                } else {
+                    swal("Your saved tweet is safe!");
+                }
+            });
     }
     // setCategory(category) {
     //     if (category === null) {
