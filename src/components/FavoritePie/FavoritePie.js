@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import './FavoriteTwt.css';
 import { Button, FormGroup, Input } from 'reactstrap';
+import swal from 'sweetalert';
 
 export class FavoritePie extends Component {
 
@@ -16,7 +17,23 @@ export class FavoritePie extends Component {
         // const propertyValues = Object.values(this.props.pie[0]);
         console.log('what is in the pie reducer', id);
         // console.log('What is in the object.values:', propertyValues);
-        this.props.dispatch({ type: 'DELETE_PIE', payload: id });
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this chart result!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("Poof! Your saved chart result has been deleted!", {
+                        icon: "success",
+                    });
+                    this.props.dispatch({ type: 'DELETE_PIE', payload: id });
+                } else {
+                    swal("Your saved chart result is safe!");
+                }
+            });
     }
 
     setIsOpen = () => {
