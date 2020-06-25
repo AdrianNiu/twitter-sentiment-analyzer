@@ -70,31 +70,6 @@ class AboutPage extends Component {
 
 
   render() {
-    if (this.state.hasSearched) {
-      console.log(this.props.reduxState.searchReducer.pagination.count)
-      return (
-        <>
-          <div className="search">
-            <header><h2>!!!!!!Search for a Twitter Keyword!</h2></header>
-            <input value={this.state.search} onChange={this.handleChange} />
-            <button variant="contained" color="primary" onClick={this.handleSubmit}>Search</button>
-            <ul>
-              {/* <h1>Showing {this.props.reduxState.searchReducer.pagination.count} of {this.props.reduxState.searchReducer.pagination.total_count}</h1> */}
-              {this.props.reduxState.searchReducer.data.map(giphy => {
-                return (
-                  <>
-                    <li>
-                      {/* <img alt="giphy image?" src={giphy.images.fixed_height_downsampled.url}></img> */}
-                      <button variant="contained" color="primary" onClick={(event) => this.addToFav(giphy.images.fixed_height_downsampled.url)}>Save</button>
-                    </li>
-                  </>
-                );
-              })}
-            </ul>
-          </div>
-        </>
-      );
-    } else {
       return (
         <>
           <div>
@@ -121,7 +96,7 @@ class AboutPage extends Component {
       );
     }
   }
-}
+
 
 // export default withStyles()(connect(mapStateToProps)(SearchPage));
 

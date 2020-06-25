@@ -9,6 +9,7 @@ import { Jumbotron} from 'reactstrap';
 
 import { Table } from 'reactstrap';
 
+
 //word cloud test
 // import ReactWordcloud from 'react-wordcloud';
 // import words from './words';
@@ -16,6 +17,7 @@ import { Table } from 'reactstrap';
 import swal from 'sweetalert';
 
 import CanvasJSReact from '../../assets/canvasjs.react';
+import GotTweets from '../GotTweets/GotTweets';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
@@ -69,11 +71,7 @@ class SearchPage extends Component {
 
   };
 
-  addToFav = (tweet) => {
-    console.log('In addToFav', tweet);
-    swal("Successful!", "You have saved the tweet!");
-    this.props.dispatch({ type: "POST_FAV", payload: { saved_tweet: tweet  } })
-  }
+  
 
   render() {
     if (this.state.hasSearched && this.props.reduxState.searchReducer.length>0) {
@@ -160,25 +158,18 @@ class SearchPage extends Component {
               {/* <h1>Showing {this.props.reduxState.searchReducer.pagination.count} of {this.props.reduxState.searchReducer.pagination.total_count}</h1> */}
             {this.props.reduxState.searchReducer.map(tweet => {
               return (
-                <>
-                  <tbody>
-                    {/* <img src={tweet.images.fixed_height_downsampled.url}></img> */}
 
-                    <tr>
-                      <td>{tweet.tweet}</td>
-                      <td>{tweet.sentiment}</td>
-                      <td>{tweet.score}</td>
-                      <td><Button variant="contained" onClick={(event) => this.addToFav(tweet)} color="secondary" size="sm">Save</Button></td>
-                      {/* <td><button variant="contained" color="primary" onClick={(event) => this.addToFav(tweet)}>Save</button></td> */}
-                    </tr>
-                    
-                    {/* <p>{JSON.stringify(tweet.counter)}</p> */}
-
-                    
-                  </tbody>
-                </>
-
-
+                <GotTweets key={tweet.counter} tweet={tweet}/>
+                // <>
+                //   <tbody>
+                //     <tr>
+                //       <td>{tweet.tweet}</td>
+                //       <td>{tweet.sentiment}</td>
+                //       <td>{tweet.score}</td>
+                //       <td><Button variant="contained" onClick={(event) => this.addToFav(tweet)} color="secondary" size="sm">Save</Button></td>
+                //     </tr>
+                //   </tbody>
+                // </>
               );
             })}
             </Table>
