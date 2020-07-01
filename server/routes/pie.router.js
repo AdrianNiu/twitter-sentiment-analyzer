@@ -3,16 +3,6 @@ const pool = require('../modules/pool');
 
 const router = express.Router();
 
-/*
-CREATE TABLE "sentiment_pie" (
-    "id" SERIAL PRIMARY KEY,
-    "pie" VARCHAR(100),
-    "notes" VARCHAR(1000),
-    "keyword" VARCHAR(100),
-	"time" VARCHAR(100)
-);
-*/
-
 
 // return all favorite images
 router.get('/', (req, res) => {
@@ -27,9 +17,6 @@ router.get('/', (req, res) => {
             res.sendStatus(500);
         });
 });
-
-
-
 
 
 // add a new favorite Pie Chart
