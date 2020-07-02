@@ -1,3 +1,5 @@
+// File for potential wordcloud generation
+
 export default [
     {
         text: 'told',
