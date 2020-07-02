@@ -30,14 +30,7 @@ export class FavoriteTwt extends Component {
     delete = (id) => {
         this.props.dispatch({ type: 'DELETE_FAV', payload: id })
     }
-    // setCategory(category) {
-    //     if (category === null) {
-    //         return <p>Category:</p>
-    //     }
-    //     else {
-    //         return <p>Category: {category}</p>
-    //     }
-    // }
+   
 
 
     //button part
@@ -67,7 +60,7 @@ export class FavoriteTwt extends Component {
             <>
             <tbody>
                 <tr key={this.props.favorite.id}>
-                            {/* <td>{this.props.favorite.id}</td> */}
+                        
                             <td>{this.props.favorite.time}</td>
                             <td>{this.props.favorite.keyword}</td>
 
@@ -77,13 +70,8 @@ export class FavoriteTwt extends Component {
                             {this.state.isOpen ? (
                                 <div>
                                     <div>
-                                        {/* <h2>Notes</h2> */}
-                                        {/* <hr /> */}
                                         <article>
-                                            {/* <textarea
-                                                spellCheck="true"
-                                                value={this.state.notes || ''}
-                                                onChange={(event) => this.handleChangeFor(event)}></textarea> */}
+                                            
                                                 <FormGroup>
                                                     {/* <Label for="exampleText">Notes</Label> */}
                                                     <hr />
@@ -104,17 +92,6 @@ export class FavoriteTwt extends Component {
                         </div>
                         
                         </td>
-
-                            {/* <td><select id="category" onChange={ (event) => this.handleChange( event )}>
-                                <option></option>
-                                <option value="1">Funny</option>
-                                <option value="2">Cohort</option>
-                                <option value="3">Cartoon</option>
-                                <option value="4">NSFW</option>
-                                <option value="5">Meme</option>
-                            </select>
-                            <button onClick={this.handleClick}>Set Category</button>
-                            </td> */}
                             <td>{this.props.favorite.notes}</td>
                             <td>{this.props.favorite.sentiment}</td>
                             <td>{this.props.favorite.sentiment_score}</td>
@@ -124,29 +101,6 @@ export class FavoriteTwt extends Component {
                     
             </tbody>
                 
-            
-
-            {/* <div>
-                <h1>{this.props.favorite.time}</h1>
-                <h1>{this.props.favorite.id}</h1>
-                <img src={this.props.favorite.URL} alt="FavGif" />
-                {JSON.stringify(this.props.favorite)}
-                <button onClick={(event) => this.delete(this.props.favorite.id)}>Remove</button>
-                <div className="category">
-                    {this.setCategory(this.props.favorite.name)}
-                    <label htmlFor="category"><button onClick={this.handleClick}>Set Category</button></label>
-                    <select id="category" onChange={(event) => this.handleChange(event)}>
-                        <option></option>
-                        <option value="1">Funny</option>
-                        <option value="2">Cohort</option>
-                        <option value="3">Cartoon</option>
-                        <option value="4">NSFW</option>
-                        <option value="5">Meme</option>
-
-                    </select>
-                    
-                </div>
-            </div> */}
             </>
         )
     }
