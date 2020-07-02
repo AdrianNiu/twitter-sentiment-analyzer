@@ -16,7 +16,6 @@ const Nav = (props) => (
       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-      
       </h2>
     </Link>
     <div className="nav-right">

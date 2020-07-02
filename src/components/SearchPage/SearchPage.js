@@ -95,9 +95,6 @@ class SearchPage extends Component {
           indexLabelFontSize: 16,
           indexLabel: "{label} - {y}%",
           dataPoints: [
-            // { y: 32, label: "Health" },
-            // { y: 22, label: "Finance" },
-            // { y: 15, label: "Education" },
             { y: this.props.reduxState.searchReducer[this.props.reduxState.searchReducer.length - 1].counter[1].toFixed(2), label: "Neutral" },
             { y: this.props.reduxState.searchReducer[this.props.reduxState.searchReducer.length - 1].counter[0].toFixed(2), label: "Negative" },
             { y: this.props.reduxState.searchReducer[this.props.reduxState.searchReducer.length - 1].counter[2].toFixed(2), label: "Positive" }

@@ -47,14 +47,6 @@ export class FavoriteTwt extends Component {
                 }
             });
     }
-    // setCategory(category) {
-    //     if (category === null) {
-    //         return <p>Category:</p>
-    //     }
-    //     else {
-    //         return <p>Category: {category}</p>
-    //     }
-    // }
 
 
     //button part
@@ -122,16 +114,6 @@ export class FavoriteTwt extends Component {
                         
                         </td>
 
-                            {/* <td><select id="category" onChange={ (event) => this.handleChange( event )}>
-                                <option></option>
-                                <option value="1">Funny</option>
-                                <option value="2">Cohort</option>
-                                <option value="3">Cartoon</option>
-                                <option value="4">NSFW</option>
-                                <option value="5">Meme</option>
-                            </select>
-                            <button onClick={this.handleClick}>Set Category</button>
-                            </td> */}
                             <td>{this.props.favorite.notes}</td>
                             <td>{this.props.favorite.sentiment}</td>
                             <td>{this.props.favorite.sentiment_score}</td>
