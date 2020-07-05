@@ -7,23 +7,15 @@
 -- need to add an sql for the pie chart database, the info needed are, date keyword searched, note, and the percentage
 
 
-CREATE TABLE "user" (
-    "id" SERIAL PRIMARY KEY,
-    "username" VARCHAR (80) UNIQUE NOT NULL,
-    "password" VARCHAR (1000) NOT NULL
-);
-
 
 CREATE TABLE "user"
 (
     "id" SERIAL PRIMARY KEY,
     "username" VARCHAR (80) UNIQUE NOT NULL,
-    "password" VARCHAR (1000) NOT NULL
-);
-
-
-ALTER TABLE "user"
- ADD "email" VARCHAR (255);
+    "password" VARCHAR (1000) NOT NULL,
+    "email" VARCHAR (255),
+ );
+ 
 
 CREATE TABLE "search_result"
 (
@@ -35,31 +27,13 @@ CREATE TABLE "sentiment_result"
 (
     "id" SERIAL PRIMARY KEY,
     "time_stamp" TIMESTAMP,
-    "sentiment_text" VARCHAR (512)
+    "sentiment_text" VARCHAR (512),
+    "sentiment_score" INT,
+    "sentiment" VARCHAR (50),
+    "time" VARCHAR (100),
+    "keyword" VARCHAR (100),
+    "notes" VARCHAR (1000),
 );
-
-ALTER TABLE "sentiment_result"
- ADD "sentiment_score" INT;
-
-ALTER TABLE "sentiment_result"
- ADD "sentiment" VARCHAR(50);
-
-ALTER TABLE "sentiment_result"
- ADD "time" VARCHAR(100);
-
-ALTER TABLE "sentiment_result" 
-DROP "time_stamp ";
-
-ALTER TABLE "sentiment_result" 
-ADD "keyword" VARCHAR(100);
-
-ALTER TABLE "sentiment_result" 
-ADD "note" VARCHAR(1000);
-
-ALTER SEQUENCE sentiment_result_id_seq RESTART WITH 1;
-
-ALTER TABLE "sentiment_result" 
-ADD "notes" VARCHAR(1000);
 
 CREATE TABLE "sentiment_pie"
 (
