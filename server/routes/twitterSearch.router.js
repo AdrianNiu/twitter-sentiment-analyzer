@@ -69,10 +69,13 @@ router.get('/:id', (req, res) => {
                                 sentimentsCounter["Neutral"] += 1;
                                 break;
                         }
+
+                        
+
+
                     }
                     console.log(sentimentsCounter);
                 
-
                 twitterData.push({
                     sentiment: tweet_sentiment,
                     score: score,
@@ -80,9 +83,10 @@ router.get('/:id', (req, res) => {
                     // neg_counter: sentimentsCounter.Negative,
                     // neu_counter: sentimentsCounter.Neutral,
                     // pos_counter: sentimentsCounter.Positive
-                    counter: [(sentimentsCounter.Negative / (sentiment_text.length-1)) * 100, (sentimentsCounter.Neutral / (sentiment_text.length-1)) * 100, (sentimentsCounter.Positive / (sentiment_text.length-1))*100],
+                    counter: [(sentimentsCounter.Negative / (sentiment_text.length - 1)) * 100, (sentimentsCounter.Neutral / (sentiment_text.length - 1)) * 100, (sentimentsCounter.Positive / (sentiment_text.length - 1)) * 100],
                     keyword: params.q
                 });
+                
                 // console.log('the data sending back', twitterData);
                 // console.log(params.q);
                 
