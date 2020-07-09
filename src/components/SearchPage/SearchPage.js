@@ -126,20 +126,28 @@ class SearchPage extends Component {
             <tbody>
             <tr>
             
-            <th><div style={{ height: 400, width: 600 }}>
+                <th><div id = "chart" style={{ height: 400, width: 600 }}>
               <CanvasJSChart options={options}
               /* onRef={ref => this.chart = ref} */
               />
-          </div> </th>
+          </div> 
+                  <br />
+                  <br />
+          <div id="chart-button">
+            < Button aligh="right" color="secondary" onClick={(event) => this.handleSave(event)}> Save Chart</Button>
+
+          </div>
+                  
+          </th>
           
-          
+                
           </tr>
             </tbody>
           </table>
           
           {/* button handle submit save chart */}
           <br/>
-          < Button aligh="right" color="secondary" onClick={(event) => this.handleSave(event)}> Save Chart</Button>
+          
           <br />
           <br />
           <br />
