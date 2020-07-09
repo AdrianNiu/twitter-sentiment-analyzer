@@ -5,5 +5,17 @@
 
 #twitter-result {
     /* padding: 50px; */
-    margin: 60px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+#chart-button {
+    float: right;
+}
+
+#chart {
+   margin-left: 50px; 
+   margin-top: 35px;
 }
