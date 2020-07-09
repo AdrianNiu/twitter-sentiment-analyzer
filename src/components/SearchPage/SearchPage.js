@@ -143,6 +143,7 @@ class SearchPage extends Component {
           <br />
           <br />
           <br />
+          <div id="twitter-result">
             <Table>
               <thead>
                 <tr>
@@ -171,6 +172,7 @@ class SearchPage extends Component {
             })}
             </Table>
           </div>
+        </div>
             
         
       );
