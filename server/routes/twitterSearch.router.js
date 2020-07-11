@@ -87,8 +87,6 @@ router.get('/:id', (req, res) => {
                     keyword: params.q
                 });
                 
-                // console.log('the data sending back', twitterData);
-                // console.log(params.q);
                 
             })
             // console.log('sentiment result', sentiment_text);
