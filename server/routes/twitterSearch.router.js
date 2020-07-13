@@ -53,7 +53,7 @@ router.get('/:id', (req, res) => {
                 } else if (score < 0) {
                     tweet_sentiment = 'negative'
                 }
-                console.log('sentiment',tweet_sentiment);
+                
                 
                 
                     var sentimentsCounter = { "Negative": 0, "Neutral": 0, "Positive": 0 };
@@ -74,7 +74,9 @@ router.get('/:id', (req, res) => {
 
 
                     }
-                    console.log(sentimentsCounter);
+                    // console.log(sentimentsCounter);
+                    // console.log('sentiment', tweet_sentiment);
+                    console.log('what is in the twitterlength', twitterData.length);
                 
                 twitterData.push({
                     sentiment: tweet_sentiment,
