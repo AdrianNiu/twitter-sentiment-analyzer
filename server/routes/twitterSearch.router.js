@@ -74,9 +74,9 @@ router.get('/:id', (req, res) => {
 
 
                     }
-                    // console.log(sentimentsCounter);
+                    console.log("sentiment counter???",sentimentsCounter);
                     // console.log('sentiment', tweet_sentiment);
-                    console.log('what is in the twitterlength', twitterData.length);
+                    // console.log('what is in the twitterlength', twitterData.length);
                 
                 twitterData.push({
                     sentiment: tweet_sentiment,
