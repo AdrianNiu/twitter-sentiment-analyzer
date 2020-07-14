@@ -75,12 +75,12 @@ Before you get started, make sure you have the following software installed on y
 * React Sagas
 * Redux
 * JavaScript
-* React Bootstrap
-* Sweet Alerts
 * Node.js
 * Express
 * PostgreSQL
 * Passport
+* Sweet Alerts
+* React Bootstrap
 
 ## Acknowledgement
 Thanks to [Prime Digital Academy](https://www.primeacademy.io) for providing the knowledge to create this application
