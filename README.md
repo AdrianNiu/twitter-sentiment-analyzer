@@ -34,7 +34,7 @@ View of the saved tweets page
 
 In order to retrieve data from the API, you can establish a twitter developer account following [here](https://developer.twitter.com/en/apply-for-access). 
 
-Before you get started, make sure you have the following software installed on your computer:
+Before you get started, you can check if the following softwares have been installed on your computer:
 
 
 ## Installation
