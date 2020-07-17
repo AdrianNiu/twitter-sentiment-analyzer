@@ -187,11 +187,7 @@ class SearchPage extends Component {
     } else {
       return (
         <>
-          {/* <div className="search">
-            <header><h2>Search for a Twitter Keyword!</h2></header>
-            <input value={this.state.search} onChange={this.handleChange} />
-            <button variant="contained" color="primary" onClick={this.handleSubmit}>Search</button>
-          </div> */}
+          
           <div>
             <Jumbotron>
               <h1 className="display-3">Twitter Sentiment Analyzer</h1>
