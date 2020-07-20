@@ -41,7 +41,7 @@ router.get('/:id', (req, res) => {
             // console.log(req.params);
             // Need update to streamline the sentiment calculation
             var twitterData = [];
-        var sentiment_text = tweets.statuses;
+            var sentiment_text = tweets.statuses;
             sentiment_text.forEach(function(s){
                 score = sentiment.analyze(s.text).score;
                 console.log('sentiment_score', score);
@@ -74,8 +74,11 @@ router.get('/:id', (req, res) => {
 
 
                     }
-                    console.log("sentiment counter???",sentimentsCounter);
-                    // console.log('sentiment', tweet_sentiment);
+                    // console.log("sentiment counter???",sentimentsCounter);
+                console.log('what is in the length?', sentiment_text.length);
+                    
+                    
+                    // console.log('sentiment_text???', sentiment_text);
                     // console.log('what is in the twitterlength', twitterData.length);
                 
                 twitterData.push({
@@ -85,7 +88,7 @@ router.get('/:id', (req, res) => {
                     // neg_counter: sentimentsCounter.Negative,
                     // neu_counter: sentimentsCounter.Neutral,
                     // pos_counter: sentimentsCounter.Positive
-                    counter: [(sentimentsCounter.Negative / (sentiment_text.length - 1)) * 100, (sentimentsCounter.Neutral / (sentiment_text.length - 1)) * 100, (sentimentsCounter.Positive / (sentiment_text.length - 1)) * 100],
+                    counter: [(sentimentsCounter.Negative / (sentiment_text.length)) * 100, (sentimentsCounter.Neutral / (sentiment_text.length)) * 100, (sentimentsCounter.Positive / (sentiment_text.length)) * 100],
                     keyword: params.q
                 });
                 
