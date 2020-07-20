@@ -54,33 +54,6 @@ router.get('/:id', (req, res) => {
                     tweet_sentiment = 'negative'
                 }
                 
-                
-                
-                    var sentimentsCounter = { "Negative": 0, "Neutral": 0, "Positive": 0 };
-                    for (var i = 0; i < twitterData.length; i++) {
-                        switch (twitterData[i].sentiment) {
-                            case 'positive':
-                                sentimentsCounter["Positive"] += 1;
-                                break;
-                            case 'negative':
-                                sentimentsCounter["Negative"] += 1;
-                                break;
-                            case 'neutral':
-                                sentimentsCounter["Neutral"] += 1;
-                                break;
-                        }
-
-                        
-
-
-                    }
-                    // console.log("sentiment counter???",sentimentsCounter);
-                console.log('what is in the length?', sentiment_text.length);
-                    
-                    
-                    // console.log('sentiment_text???', sentiment_text);
-                    // console.log('what is in the twitterlength', twitterData.length);
-                
                 twitterData.push({
                     sentiment: tweet_sentiment,
                     score: score,
@@ -88,7 +61,7 @@ router.get('/:id', (req, res) => {
                     // neg_counter: sentimentsCounter.Negative,
                     // neu_counter: sentimentsCounter.Neutral,
                     // pos_counter: sentimentsCounter.Positive
-                    counter: [(sentimentsCounter.Negative / (sentiment_text.length)) * 100, (sentimentsCounter.Neutral / (sentiment_text.length)) * 100, (sentimentsCounter.Positive / (sentiment_text.length)) * 100],
+                    // counter: [(sentimentsCounter.Negative / (sentiment_text.length)) * 100, (sentimentsCounter.Neutral / (sentiment_text.length)) * 100, (sentimentsCounter.Positive / (sentiment_text.length)) * 100],
                     keyword: params.q
                 });
                 
@@ -96,6 +69,24 @@ router.get('/:id', (req, res) => {
             })
             // console.log('sentiment result', sentiment_text);
     //----------------------------------------------------------------------------------------
+            var sentimentsCounter = { "Negative": 0, "Neutral": 0, "Positive": 0 };
+            for (var i = 0; i < twitterData.length; i++) {
+                switch (twitterData[i].sentiment) {
+                    case 'positive':
+                        sentimentsCounter["Positive"] += 1;
+                        break;
+                    case 'negative':
+                        sentimentsCounter["Negative"] += 1;
+                        break;
+                    case 'neutral':
+                        sentimentsCounter["Neutral"] += 1;
+                        break;
+                }
+            }
+            
+            twitterData.push({
+                counter: [(sentimentsCounter.Negative / (sentiment_text.length)) * 100, (sentimentsCounter.Neutral / (sentiment_text.length)) * 100, (sentimentsCounter.Positive / (sentiment_text.length)) * 100]
+            })
             
             
             res.send(twitterData)
