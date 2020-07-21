@@ -9,7 +9,7 @@ import FavoritePie from '../FavoritePie/FavoritePie';
 
 // import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Table } from 'reactstrap';
-
+import './PiePage.css';
 
 
 
@@ -29,7 +29,7 @@ export class PiePage extends Component {
             <>
                 {/* <p>PiePage</p> */}
                 
-                <section>
+                <section id="saved-chart-result">
                     {/* <Table className="result_table"> */}
                     <Table>
                         <thead>

@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { Button, FormGroup, Input } from 'reactstrap';
 import swal from 'sweetalert';
 
+
 export class FavoritePie extends Component {
 
     state = {
