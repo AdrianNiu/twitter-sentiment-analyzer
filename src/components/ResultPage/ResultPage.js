@@ -6,8 +6,7 @@ import { withRouter } from 'react-router-dom';
 import FavoriteTwt from '../FavoriteTwt/FavoriteTwt';
 
 import { Table } from 'reactstrap';
-
-
+import './ResultPage.css';
 
 
 
@@ -26,7 +25,7 @@ export class ResultPage extends Component {
             <>
                 <p></p>
 
-                <section>
+                <div id="saved-twitter-result">
                     {/* <Table className="result_table"> */}
                     <Table>
                         <thead>
@@ -47,7 +46,7 @@ export class ResultPage extends Component {
                             <FavoriteTwt key={favorite.id} favorite={favorite} />
                         )}
                     </Table>
-                </section>
+                </div>
 
                 <section className="favorites">
                     {/* {JSON.stringify(this.props.reduxStore.favourites)} */}
