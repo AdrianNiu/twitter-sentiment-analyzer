@@ -29,7 +29,7 @@ class AboutPage extends Component {
     console.log(this);
     event.preventDefault();
     console.log(this.state.search);
-    this.props.dispatch({ type: "GET_GIF", payload: this.state.search });
+    // this.props.dispatch({ type: "GET_GIF", payload: this.state.search });
     // this.state.hasSearched = true;
     this.setState({
       hasSearched: true

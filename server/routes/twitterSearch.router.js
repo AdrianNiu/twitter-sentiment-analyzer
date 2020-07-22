@@ -69,14 +69,10 @@ router.get('/:id', (req, res) => {
                         break;
                 }
             }
-            
             twitterData.push({
                 counter: [(sentimentsCounter.Negative / (sentiment_text.length)) * 100, (sentimentsCounter.Neutral / (sentiment_text.length)) * 100, (sentimentsCounter.Positive / (sentiment_text.length)) * 100]
             })
-            
-            
             res.send(twitterData)
-            // res.send(sentiment_text)
         }
     })
 })
