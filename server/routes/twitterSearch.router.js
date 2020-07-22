@@ -5,21 +5,9 @@ require('dotenv').config();
 const router = express.Router();
 
 const config = require('../config.js');
-
 var Twitter = require('twitter');
-
 var client = new Twitter(config);
 
-
-// search and returns searched images
-// router.get('/', (req, res) => {
-//     client.get('statuses/user_timeline', params, function (error, tweets, response) {
-//         if (!error) {
-//             console.log(tweets);
-//             res.send(tweets)
-//         }
-//     })
-// })
 
 //sentiment analysis below
 var Sentiment = require('sentiment');
@@ -58,9 +46,7 @@ router.get('/:id', (req, res) => {
                     sentiment: tweet_sentiment,
                     score: score,
                     tweet: s.text,
-                    // neg_counter: sentimentsCounter.Negative,
-                    // neu_counter: sentimentsCounter.Neutral,
-                    // pos_counter: sentimentsCounter.Positive
+                    
                     // counter: [(sentimentsCounter.Negative / (sentiment_text.length)) * 100, (sentimentsCounter.Neutral / (sentiment_text.length)) * 100, (sentimentsCounter.Positive / (sentiment_text.length)) * 100],
                     keyword: params.q
                 });
