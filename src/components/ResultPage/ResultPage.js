@@ -18,8 +18,6 @@ export class ResultPage extends Component {
         
     }
 
-    
-
     render() {
         return (
             <>
@@ -49,9 +47,6 @@ export class ResultPage extends Component {
                 </div>
 
                 <section className="favorites">
-                    {/* {JSON.stringify(this.props.reduxStore.favourites)} */}
-                    {/* {JSON.stringify(this.props.favorites)} */}
-                    
                 </section>
             </>
         )
