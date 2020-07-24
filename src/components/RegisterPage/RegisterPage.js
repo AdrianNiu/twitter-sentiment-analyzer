@@ -10,6 +10,7 @@ class RegisterPage extends Component {
   registerUser = (event) => {
     event.preventDefault();
 
+    //pending register user for SQL modification
     if (this.state.username && this.state.password) {
       this.props.dispatch({
         type: 'REGISTER',
