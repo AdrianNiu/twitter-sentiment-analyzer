@@ -48,8 +48,8 @@ Before you get started, you can check if the following softwares have been insta
     ```
     * While you're in your new `.env` file, take the time to replace `superDuperSecret` with some long random string like `25POUbVtx6RKVNWszd9ERB9Bb6` to keep your application secure. Here's a site that can help you: [https://passwordsgenerator.net/](https://passwordsgenerator.net/). If you don't do this step, create a secret with less than eight characters, or leave it as `superDuperSecret`, you will get a warning.
 4. If Postgres is not already running, start it by entering `brew services start postgresql` into the terminal
-5. Run `npm run server`
-6. Run `npm run client`
+5. Run `npm run server` to start the server
+6. Run `npm run client` to start the client
 7. Running the two previous commands will open a web browser with the application
 
 
