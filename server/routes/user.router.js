@@ -40,4 +40,23 @@ router.post('/logout', (req, res) => {
   res.sendStatus(200);
 });
 
+// identify user who are first time login to show tutorial
+router.put('/update-status', rejectUnauthenticated, (req, res) => {
+  const first_time = false;
+  const user_id = req.user.id;
+  //Updates the step with the answer the user provided
+  const queryText = `
+                    UPDATE "user" 
+                    SET first_time = $1
+                    WHERE id = $2;
+                    `;
+  pool.query(queryText, [first_time, user_id]).then((result) => {
+    res.sendStatus(204);
+  }).catch((error) => {
+    console.log(`Error on query ${error}`);
+    res.sendStatus(500);
+  });
+
+});
+
 module.exports = router;
