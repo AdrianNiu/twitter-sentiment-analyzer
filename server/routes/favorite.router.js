@@ -3,9 +3,8 @@ const pool = require('../modules/pool');
 
 const router = express.Router();
 
-// return all favorite images
+// return all favourite twitter
 router.get('/', (req, res) => {
-  // const queryText = 'SELECT "favorite"."id", "favorite"."URL", "category"."name" FROM "favorite" LEFT OUTER JOIN "category" ON "favorite"."category_id" = "category"."id"';
   const queryText = 'SELECT "sentiment_result"."id" ,"sentiment_result"."sentiment_text", "sentiment_result"."sentiment_score", "sentiment_result"."sentiment", "sentiment_result"."time", "sentiment_result"."keyword", "sentiment_result"."note", "sentiment_result"."notes" FROM "sentiment_result" order by "sentiment_result"."id"'; 
   pool.query(queryText)
     .then((result) => { 
