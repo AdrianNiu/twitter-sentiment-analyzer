@@ -45,3 +45,5 @@ CREATE TABLE "sentiment_pie"
     "keyword" VARCHAR(100),
     "time" VARCHAR(100)
 );
+
+-- alter TABLE to add user into sentiment pie chart
