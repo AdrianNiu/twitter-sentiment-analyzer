@@ -20,7 +20,8 @@ CREATE TABLE "user"
 CREATE TABLE "search_result"
 (
     "user_id" INT REFERENCES "user",
-    "sentiment_id" INT REFERENCES "sentiment_result"
+    "sentiment_id" INT REFERENCES "sentiment_result",
+    "pie_id" INT REFERENCES "sentiment_pie",
 );
 
 CREATE TABLE "sentiment_result"
