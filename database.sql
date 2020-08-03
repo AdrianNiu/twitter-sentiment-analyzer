@@ -16,6 +16,7 @@ CREATE TABLE "user"
     "email" VARCHAR (255),
  );
  
+-- update put and post request to take in data
 
 CREATE TABLE "search_result"
 (
