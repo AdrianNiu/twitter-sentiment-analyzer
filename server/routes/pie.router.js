@@ -4,7 +4,7 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 
-// return all favorite images
+// return all favorite images in join of user table
 router.get('/', (req, res) => {
     const queryText = `SELECT * FROM "sentiment_pie" order by "sentiment_pie"."id"`;
     pool.query(queryText)
