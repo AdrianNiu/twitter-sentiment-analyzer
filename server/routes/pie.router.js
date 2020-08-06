@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 });
 
 
-// add a new favorite Pie Chart update post data to upload user info
+// add a new favorite Pie Chart update post data to upload user info， connect and update the sql table
 router.post('/', (req, res) => {
     console.log('the PieChart req body is:', req.body)
     const fav_pie = req.body;
