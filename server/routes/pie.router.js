@@ -9,6 +9,27 @@ router.get('/', (req, res) => {
     const id = req.user.id;
     console.log('GET pie id is:', req.user);
     const queryText = `SELECT * FROM "sentiment_pie" order by "sentiment_pie"."id"`;
+    // const queryText = `
+    //                     SELECT "step"."id" as "step_id",
+    //                     "tree_step"."id" as "tree_step_id",
+    //                     "tree"."name" as "tree_name", 
+    //                     "tree"."date_created", 
+    //                     "step"."name" as "step_name",
+    //                     "step"."description",
+    //                     "step"."optional_hint", 
+    //                     "phase"."name" as "phase_name", 
+    //                     "tree_step"."status",
+    //                     "tree"."status" as "tree_status", 
+    //                     "tree_step"."locked",
+    //                     "tree_step"."step_number",
+    //                     "tree_step"."content"
+    //                     FROM "tree" 
+    //                     LEFT JOIN "tree_step" ON "tree"."id" = "tree_step"."tree_id" 
+    //                     LEFT JOIN "step" ON "tree_step"."step_id" = "step"."id" 
+    //                     LEFT JOIN "phase" ON "step"."phase_id" = "phase"."id" 
+    //                     WHERE "tree"."id" = $1
+    //                     order by "tree_step"."step_number";
+    //                     `;
     pool.query(queryText)
         .then((result) => {
             console.log('Get PIE on server', result.rows);
