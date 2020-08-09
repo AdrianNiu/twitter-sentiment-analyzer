@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
     const id = req.user.id;
     console.log('GET pie id is:', req.user);
     const queryText = `SELECT * FROM "sentiment_pie" order by "sentiment_pie"."id"`;
+    // need to add another row of data entry in pie_id
     // const queryText = `
     //                     SELECT *
     //                     FROM "sentiment_pie" 
