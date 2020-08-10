@@ -49,3 +49,5 @@ CREATE TABLE "sentiment_pie"
 );
 
 -- alter TABLE to add user into sentiment pie chart
+ALTER TABLE "search_result"
+ ADD "pie_id" INT REFERENCES "sentiment_pie";
