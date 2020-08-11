@@ -8,8 +8,13 @@ const router = express.Router();
 router.get('/', (req, res) => {
     const id = req.user.id;
     console.log('GET pie id is:', req.user);
-    const queryText = `SELECT * FROM "sentiment_pie" order by "sentiment_pie"."id"`;
+    const queryText = `SELECT * FROM "sentiment_pie" 
+                        LEFT JOIN "search_result" ON "sentiment_pie"."id" = "search_result"."pie_id" 
+                        LEFT JOIN "user" ON "user"."id" = "search_result"."user_id"
+                        order by "sentiment_pie"."id" 
+                        `;
     // need to add another row of data entry in pie_id
+    
     // const queryText = `
     //                     SELECT *
     //                     FROM "sentiment_pie" 
