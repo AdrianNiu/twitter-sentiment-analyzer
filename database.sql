@@ -57,3 +57,7 @@ SELECT * FROM "sentiment_pie"
         LEFT JOIN "search_result" ON "sentiment_pie"."id" = "search_result"."pie_id"
         LEFT JOIN "user" ON "user"."id" = "search_result"."user_id"
         order by "sentiment_pie"."id";
+
+-- alter TABLE to add user into sentiment_pie
+ALTER TABLE "sentiment_pie"
+ ADD "user_id" INT;
