@@ -40,6 +40,8 @@ router.get('/', (req, res) => {
 // create a new column for user id
 router.post('/', (req, res) => {
     const id = req.user.id;
+    console.log('what is the id?????', id);
+    
     console.log('the PieChart req body is:', req.body)
     const fav_pie = req.body;
     var pieData = [];
@@ -50,14 +52,15 @@ router.post('/', (req, res) => {
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     var dateTime = date + ' ' + time;
 
-    const queryText = `INSERT INTO sentiment_pie ("pie_negative", "pie_neutral", "pie_positive", "keyword", "time")
-                    VALUES ($1, $2, $3, $4, $5)`;
+    const queryText = `INSERT INTO sentiment_pie ("pie_negative", "pie_neutral", "pie_positive", "keyword", "time", "user_id")
+                    VALUES ($1, $2, $3, $4, $5, $6)`;
     const queryValues = [
         fav_pie.saved_pie[0].toFixed(2),
         fav_pie.saved_pie[1].toFixed(2),
         fav_pie.saved_pie[2].toFixed(2),
         fav_pie.keyword,
         dateTime,
+        id,
     ];
     pool.query(queryText, queryValues)
         .then(() => { res.sendStatus(201); })
