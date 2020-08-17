@@ -14,8 +14,8 @@ router.get('/', (req, res) => {
     //                     order by "sentiment_pie"."id" 
     //                     `;
     const queryText = `SELECT * FROM "sentiment_pie"
-                        order by "sentiment_pie"."id" 
                         WHERE user_id = $1
+                        order by "sentiment_pie"."id" 
                         `;
 
     // need to add another row of data entry in pie_id
