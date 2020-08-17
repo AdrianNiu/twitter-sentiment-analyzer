@@ -5,8 +5,12 @@ const router = express.Router();
 
 // return all favourite twitter
 router.get('/', (req, res) => {
-  const queryText = 'SELECT "sentiment_result"."id" ,"sentiment_result"."sentiment_text", "sentiment_result"."sentiment_score", "sentiment_result"."sentiment", "sentiment_result"."time", "sentiment_result"."keyword", "sentiment_result"."note", "sentiment_result"."notes" FROM "sentiment_result" order by "sentiment_result"."id"'; 
-  pool.query(queryText)
+  const id = req.user.id;
+  const queryText = `SELECT * FROM "sentiment_result" 
+                      WHERE "user_id" = $1
+                      order by "sentiment_result"."id"
+                      `; 
+  pool.query(queryText, [id])
     .then((result) => { 
       console.log( 'Got fav twitter on server', result.rows );
       res.send(result.rows); })
@@ -22,6 +26,7 @@ router.get('/', (req, res) => {
 
 // add a new favorite 
 router.post('/', (req, res) => {
+  const id = req.user.id;
   console.log('post body',req.body)
   const fav = req.body.saved_tweet;
   console.log(fav.tweet)
@@ -32,14 +37,15 @@ router.post('/', (req, res) => {
   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   var dateTime = date + ' ' + time;
   
-  const queryText = `INSERT INTO sentiment_result ("sentiment_text", "sentiment_score", "sentiment", "time", "keyword")
-                    VALUES ($1, $2, $3, $4, $5)`;
+  const queryText = `INSERT INTO sentiment_result ("sentiment_text", "sentiment_score", "sentiment", "time", "keyword", "user_id")
+                    VALUES ($1, $2, $3, $4, $5, $6)`;
   const queryValues = [
     fav.tweet,
     fav.score,
     fav.sentiment,
     dateTime,
     fav.keyword,
+    id,
   ];
   pool.query(queryText, queryValues)
     .then(() => { res.sendStatus(201); })
