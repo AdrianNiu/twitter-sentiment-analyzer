@@ -8,29 +8,14 @@ const router = express.Router();
 router.get('/', (req, res) => {
     const id = req.user.id;
     console.log('GET pie id is:', req.user);
-    // const queryText = `SELECT * FROM "sentiment_pie" 
-    //                     LEFT JOIN "search_result" ON "sentiment_pie"."id" = "search_result"."pie_id" 
-    //                     LEFT JOIN "user" ON "user"."id" = "search_result"."user_id"
-    //                     order by "sentiment_pie"."id" 
-    //                     `;
     const queryText = `SELECT * FROM "sentiment_pie"
                         WHERE user_id = $1
                         order by "sentiment_pie"."id" 
                         `;
-
     // need to add another row of data entry in pie_id
     const queryValues = [
         id,
     ];
-    // const queryText = `
-    //                     SELECT *
-    //                     FROM "sentiment_pie" 
-    //                     LEFT JOIN "tree_step" ON "sentiment_pie"."id" = "tree_step"."tree_id"
-    //                     LEFT JOIN "step" ON "tree_step"."step_id" = "step"."id" 
-    //                     LEFT JOIN "phase" ON "step"."phase_id" = "phase"."id" 
-    //                     WHERE "tree"."id" = $1
-    //                     order by "tree_step"."step_number";
-    //                     `;
     pool.query(queryText, queryValues)
         .then((result) => {
             console.log('Get PIE on server', result.rows);
