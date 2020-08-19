@@ -1,4 +1,5 @@
 // File for potential wordcloud generation
+// need to organize word to generate the word cloud
 
 export default [
     {
