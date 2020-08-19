@@ -112,7 +112,6 @@ export class FavoritePie extends Component {
                                     <div>
                                         <article>
                                             <FormGroup>
-                                                {/* <Label for="exampleText">Notes</Label> */}
                                                 <hr />
                                                 <Input type="textarea" name="text" id="exampleText"
                                                     spellCheck="true"
