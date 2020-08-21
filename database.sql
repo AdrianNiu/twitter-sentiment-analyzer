@@ -53,11 +53,12 @@ ALTER TABLE "search_result"
  ADD "pie_id" INT REFERENCES "sentiment_pie";
 
  -- join user table with pie chart table
-SELECT * FROM "sentiment_pie"
-        LEFT JOIN "search_result" ON "sentiment_pie"."id" = "search_result"."pie_id"
-        LEFT JOIN "user" ON "user"."id" = "search_result"."user_id"
-        order by "sentiment_pie"."id";
+SELECT * FROM "sentiment_pie" order by "sentiment_pie"."id";
 
 -- alter TABLE to add user into sentiment_pie
 ALTER TABLE "sentiment_pie"
+ ADD "user_id" INT;
+
+-- alter TABLE to add user into sentiment_result
+ALTER TABLE "sentiment_result"
  ADD "user_id" INT;
