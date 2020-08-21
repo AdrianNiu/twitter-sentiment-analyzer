@@ -132,7 +132,6 @@ export class FavoritePie extends Component {
                         <td><Button color="secondary" onClick={(event) => this.handleDelete(this.props.pie.id)} size="sm">Remove</Button></td>
                         {/* <td><button variant="contained" color="primary" onClick={(event) => this.addToFav(tweet)}>Save</button></td> */}
                     </tr>
-                    {/* <p>{JSON.stringify(tweet.counter)}</p> */}
                 </tbody>
             </>
 
