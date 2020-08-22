@@ -52,9 +52,6 @@ CREATE TABLE "sentiment_pie"
 ALTER TABLE "search_result"
  ADD "pie_id" INT REFERENCES "sentiment_pie";
 
- -- join user table with pie chart table
-SELECT * FROM "sentiment_pie" order by "sentiment_pie"."id";
-
 -- alter TABLE to add user into sentiment_pie
 ALTER TABLE "sentiment_pie"
  ADD "user_id" INT;
