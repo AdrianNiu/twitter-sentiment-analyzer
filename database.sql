@@ -17,7 +17,6 @@ CREATE TABLE "user"
  );
  
 -- update put and post request to take in data
-
 CREATE TABLE "search_result"
 (
     "user_id" INT REFERENCES "user",
@@ -35,6 +34,7 @@ CREATE TABLE "sentiment_result"
     "time" VARCHAR (100),
     "keyword" VARCHAR (100),
     "notes" VARCHAR (1000),
+    "user_id" INT,
 );
 
 CREATE TABLE "sentiment_pie"
@@ -45,17 +45,6 @@ CREATE TABLE "sentiment_pie"
     "pie_positive" NUMERIC,
     "notes" VARCHAR(1000),
     "keyword" VARCHAR(100),
-    "time" VARCHAR(100)
+    "time" VARCHAR(100),
+    "user_id" INT,
 );
-
--- alter TABLE to add user into sentiment pie chart
-ALTER TABLE "search_result"
- ADD "pie_id" INT REFERENCES "sentiment_pie";
-
--- alter TABLE to add user into sentiment_pie
-ALTER TABLE "sentiment_pie"
- ADD "user_id" INT;
-
--- alter TABLE to add user into sentiment_result
-ALTER TABLE "sentiment_result"
- ADD "user_id" INT;
