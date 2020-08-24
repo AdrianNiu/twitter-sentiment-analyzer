@@ -16,13 +16,6 @@ CREATE TABLE "user"
     "email" VARCHAR (255),
  );
  
--- update put and post request to take in data
-CREATE TABLE "search_result"
-(
-    "user_id" INT REFERENCES "user",
-    "sentiment_id" INT REFERENCES "sentiment_result",
-    "pie_id" INT REFERENCES "sentiment_pie",
-);
 
 CREATE TABLE "sentiment_result"
 (
@@ -48,3 +41,11 @@ CREATE TABLE "sentiment_pie"
     "time" VARCHAR(100),
     "user_id" INT,
 );
+
+-- for future relational database expansion
+-- CREATE TABLE "search_result"
+-- (
+--     "user_id" INT REFERENCES "user",
+--     "sentiment_id" INT REFERENCES "sentiment_result",
+--     "pie_id" INT REFERENCES "sentiment_pie",
+-- );
