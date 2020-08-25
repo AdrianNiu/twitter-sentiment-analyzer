@@ -46,7 +46,6 @@ router.get('/:id', (req, res) => {
                     sentiment: tweet_sentiment,
                     score: score,
                     tweet: s.text,
-                    
                     // counter: [(sentimentsCounter.Negative / (sentiment_text.length)) * 100, (sentimentsCounter.Neutral / (sentiment_text.length)) * 100, (sentimentsCounter.Positive / (sentiment_text.length)) * 100],
                     keyword: params.q
                 });
