@@ -162,7 +162,7 @@ class SearchPage extends Component {
                 </tr>
               </thead>
               {/* <h1>Showing {this.props.reduxState.searchReducer.pagination.count} of {this.props.reduxState.searchReducer.pagination.total_count}</h1> */}
-            {this.props.reduxState.searchReducer.map(tweet => {
+              {this.props.reduxState.searchReducer.slice(0, 15).map(tweet => {
               return (
                 <GotTweets key={tweet.counter} tweet={tweet}/>
                 // needs to limit the number of tweet display to 15
