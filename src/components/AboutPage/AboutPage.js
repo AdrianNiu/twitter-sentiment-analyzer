@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-// import { withStyles } from '@material-ui/core/styles';
-// import Button from '@material-ui/core/Button';
-
-
 import { Jumbotron } from 'reactstrap';
 import { InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
 
@@ -46,7 +42,6 @@ class AboutPage extends Component {
               <p className="lead">Type in any hashtag or keyword and press enter to visualize Tweet Sentiment.</p>
               <hr className="my-2" />
               <p>This tool can help business to monitor and understand the social sentiment of their brand, product or services.</p>
-              
                 <div className="input-form">
                   <br />
                   <br />
