@@ -1,6 +1,8 @@
 // File for potential wordcloud generation
 // need to organize word to generate the word cloud
 
+// Need to transform tweet text to json format
+
 export default [
     {
         text: 'told',
