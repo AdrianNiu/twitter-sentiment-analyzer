@@ -4,24 +4,18 @@ import { connect } from "react-redux";
 // import Button from '@material-ui/core/Button';
 import { InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
 import './SearchPage.css';
-
 import { Jumbotron} from 'reactstrap';
-
 import { Table } from 'reactstrap';
-
-
 //word cloud test
 // import ReactWordcloud from 'react-wordcloud';
 // import words from './words';
-
 import swal from 'sweetalert';
 
 import CanvasJSReact from '../../assets/canvasjs.react';
 import GotTweets from '../GotTweets/GotTweets';
+
+
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
-
-
-
 
 const mapStateToProps = reduxState => ({
   reduxState,
@@ -29,8 +23,6 @@ const mapStateToProps = reduxState => ({
 });
 
 class SearchPage extends Component {
-
-  
 
   componentDidMount() {
     console.log('what is in the counter', this.props.reduxState.searchReducer);
@@ -48,8 +40,6 @@ class SearchPage extends Component {
       search: event.target.value
     });
   };
-
-
 
   handleSubmit = event => {
     console.log(this);
@@ -75,8 +65,6 @@ class SearchPage extends Component {
 
   render() {
     if (this.state.hasSearched && this.props.reduxState.searchReducer.length>0) {
-      
-
       // Canvas component
       const options = {
         theme: "light1",
@@ -101,13 +89,8 @@ class SearchPage extends Component {
           ]
         }]
       }
-
-
-        
-      // console.log(this.props.reduxState.searchReducer[0].text);
       console.log(this.props.reduxState.searchReducer && this.props.reduxState.searchReducer.length > 0 &&
          this.props.reduxState.searchReducer[this.props.reduxState.searchReducer.length-1].counter.Negative);
-      // console.log('what is in the?????', this.props.reduxState.searchReducer[searchReducer.length]); 
       return (
         
           <div className="search">
