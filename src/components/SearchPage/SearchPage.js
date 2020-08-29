@@ -122,6 +122,19 @@ class SearchPage extends Component {
           </div>
                   
           </th>
+              {/* start with word cloud frame */}
+                <th><div id="chart" style={{ height: 400, width: 600 }}>
+                  {/* <CanvasJSChart options={options}/> */}
+                  <p>Word Cloud</p>
+                </div>
+                  <br />
+                  <br />
+                  <div id="chart-button">
+                    < Button aligh="right" color="secondary" onClick={(event) => this.handleSave(event)}> Save Chart</Button>
+
+                  </div>
+
+                </th>
           
                 
           </tr>
