@@ -2,6 +2,7 @@
 // need to organize word to generate the word cloud
 
 // Need to transform tweet text to json format
+// Make tweets text seperate from text and the count of the text appeared
 
 export default [
     {
