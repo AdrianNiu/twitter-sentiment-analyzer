@@ -9,8 +9,8 @@ import { Table } from 'reactstrap';
 
 
 //word cloud test
-// import ReactWordcloud from 'react-wordcloud';
-// import words from './words';
+import ReactWordcloud from 'react-wordcloud';
+import words from './words';
 
 
 import swal from 'sweetalert';
@@ -130,6 +130,9 @@ class SearchPage extends Component {
                 <th><div id="chart" style={{ height: 400, width: 600 }}>
                   {/* <CanvasJSChart options={options}/> */}
                   <p>Word Cloud</p>
+                  <div style={{ height: 400, width: 600 }}>
+                    <ReactWordcloud words={words} />
+                  </div>
                   {/* <ReactWordcloud words={words} /> */}
                 </div>
                   <br />
