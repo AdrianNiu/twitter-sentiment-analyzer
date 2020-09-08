@@ -127,6 +127,7 @@ class SearchPage extends Component {
                   
           </th>
               {/* start with word cloud frame */}
+              {/* export search word result as a js document */}
                 <th><div id="chart" style={{ height: 400, width: 600 }}>
                   {/* <CanvasJSChart options={options}/> */}
                   <p>Word Cloud</p>
