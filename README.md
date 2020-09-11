@@ -11,7 +11,7 @@ The AFINN lexicon is a list of English terms manually rated for valence with an 
 
 ## Page Views
 
-Below is the page views of the application, you can type in something you are interested in, and see how people are talking about it on Twitter. 
+Below is the page views of the application, you can type in the keywords you are interested in, and see how people are talking about it on Twitter. 
 
 In this demo, the user is an admin from Verizon, and the admin is interested in learning how people think about the brand and services. 
 
