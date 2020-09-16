@@ -57,7 +57,7 @@ Before you get started, you can check if the following softwares have been insta
 
 1. Login with your username and password or navigate to the Register page to set up an account with your username and password.
 2. Users can access the "About" page without logging in. The "About" page provides general view of the twitter sentiment analyzer.
-3. In the search page, user can type in the keyword or hashtag they are interested to obtain the most recent tweets and visualize the sentiment results.
+3. In the search page, user can type in the keyword or hashtag they are interested to get the most recent tweets and visualize the sentiment results.
 4. The search result returns the most recent 15 tweets from tweeter API and compute the sentiment score based on AFINN Sentiment Lexicon.
 5. After completing a search, user can save the pie chart and view it later in the chart page. Users can also save a specific tweets of their interest and view it later in the result page.
 6. Under the chart page, user can view the saved sentiment pie chart with time stamp and keyword searched. User can add/edit note on a specific saved pie chart.
