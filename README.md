@@ -63,7 +63,7 @@ Before you get started, you can check if the following softwares have been insta
 6. Under the chart page, user can view the saved sentiment pie chart with time stamp and keyword searched. User can add/edit note on a saved pie chart.
 7. Under the result page, user can view the saved tweets, timestamp, keyword, sentiment score and notes. User can also add/edit note on a saved tweet.
 8. Clicking "Delete" on a specific pie chart or tweet can remove it from the page with popped confirmation.
-9. By cliicking on the search button or home button, user will be directed back to the search interface to complete a new search. 
+9. By cliicking on the search button, user will be directed back to the search interface to complete a new search. 
 
 
 
