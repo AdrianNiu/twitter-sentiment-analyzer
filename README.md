@@ -25,7 +25,7 @@ In this demo, the user case is a Verizon admin, who interested in learning how p
 <sup>View of the tweets retrived from Twitter API<sup>
 
 ![View of a Chart Page consisting of saved charts](/public/images/TSA-chart-page.jpg)
-<sup>View of the saved pie charts page<sup>
+<sup>View of the saved charts page<sup>
 
 ![View of the saved Twitter page](/public/images/TSA-tweet-result-page.jpg)
 <sup>View of the saved tweets page<sup>
