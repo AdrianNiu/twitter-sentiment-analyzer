@@ -39,7 +39,7 @@ Before you get started, you can check if the following softwares have been insta
 
 ## Installation
 
-1. Create a new database called `primie_app`
+1. Create a new database named `primie_app`
     * The `database.sql` file contains the queries you will need to be able to set up the required tables for this application
 2. Run `npm install`
 3. Create a `.env` file at the root of the project and paste this line into the file:
