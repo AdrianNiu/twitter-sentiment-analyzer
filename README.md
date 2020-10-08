@@ -32,7 +32,7 @@ In this demo, the user case is a Verizon admin, who interested in learning how p
 
 ## Prerequisites
 
-To retrieve data from the Twitter API, you can establish a twitter developer account following [here](https://developer.twitter.com/en/apply-for-access). 
+To use the Twitter API, you can establish a twitter developer account following [here](https://developer.twitter.com/en/apply-for-access). 
 
 Before you get started, you can check if the following softwares have been installed on your computer:
 
