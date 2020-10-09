@@ -28,11 +28,9 @@ export class ResultPage extends Component {
                     <Table>
                         <thead>
                             <tr>
-                                {/* <th>ID</th> */}
                                 <th>Time</th>
                                 <th>Keyword</th>
                                 <th></th>
-                                {/* <th>Note</th> */}
                                 <th>Notes</th>
                                 <th>Sentiment</th>
                                 <th>Score</th>
