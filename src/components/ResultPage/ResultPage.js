@@ -22,9 +22,7 @@ export class ResultPage extends Component {
         return (
             <>
                 <p></p>
-
                 <div id="saved-twitter-result">
-                    {/* <Table className="result_table"> */}
                     <Table>
                         <thead>
                             <tr>
