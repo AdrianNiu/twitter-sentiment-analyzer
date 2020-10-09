@@ -27,23 +27,15 @@ export class PiePage extends Component {
                 
         return (
             <>
-                {/* <p>PiePage</p> */}
-                
                 <section id="saved-chart-result">
-                    {/* <Table className="result_table"> */}
                     <Table>
                         <thead>
                             <tr>
-                                {/* <th>ID</th> */}
                                 <th>Time</th>
                                 <th>Keyword</th>
-                                {/* <th></th> */}
                                 <th>Chart</th>
                                 <th></th>
                                 <th>Notes</th>
-                                {/* <th>Sentiment</th>
-                                <th>Score</th>
-                                <th>Tweet</th> */}
                                 <th>Remove</th>
                             </tr>
                         </thead>
