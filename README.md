@@ -61,7 +61,7 @@ Before you get started, you can check if the following softwares have been insta
 4. The search result returns the most recent 15 tweets from the API and compute the sentiment score based on AFINN Sentiment Lexicon.
 5. After completing a search, user can save the pie chart and view it in the chart page. Users can also save and view a tweet of their interest in the result page.
 6. Under the chart page, user can view the saved sentiment pie chart with time stamp and keyword searched. User can add/edit note on a saved pie chart.
-7. Under the result page, user is able to view the saved tweets, timestamp, keyword, sentiment score and notes. User can also add/edit/delete note on saved tweets.
+7. Under the result page, user is able to view the saved tweets, timestamps, keywords, sentiment scores and notes. User can also add/edit/delete note on saved tweets.
 8. Clicking "Delete" button on a specific pie chart or tweet can remove it from the page with popped confirmation.
 9. By clicking on the search button, user will be directed back to the search page to complete a new search. 
 
