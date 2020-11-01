@@ -82,3 +82,7 @@ Before you get started, you can check if the following softwares have been insta
 
 ## Acknowledgement
 Thanks to [Prime Digital Academy](https://www.primeacademy.io) for providing the knowledge to create this application
+
+
+## In Progress 
+Improving search function to allow users search the tweets throughout a time period. 
