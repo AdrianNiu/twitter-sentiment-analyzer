@@ -3,7 +3,7 @@
 ## About This Application
 **The Twitter Sentiment Analyzer**
 
-The Twitter Sentiment Analyzer uses the Twitter API to retrieve tweets and visualize sentiment result by keyword. It computes the sentiment score of each tweet using AFINN, and visualize the sentiment result with a live dashboard. The most recent 15 tweets are retrieved to calculate the sentiment score. Users are able to save the visualizatioin results and retrived tweets with their interested keywords, which allows the tracking of sentiment trends over time. Users can add notes to a saved sentiment chart and tweet they saved.
+The Twitter Sentiment Analyzer uses the Twitter API to retrieve tweets and visualize sentiment result by keyword. It computes the sentiment score of each tweet using AFINN, and visualize the sentiment result with a live dashboard. The most recent 15 tweets are retrieved to calculate the sentiment scores. Users are able to save the visualizatioin results and retrived tweets with their interested keywords, which allows the tracking of sentiment trends over time. Users can add notes to a saved sentiment chart and tweet they saved.
 
 **AFINN Sentiment Lexicon**
 
