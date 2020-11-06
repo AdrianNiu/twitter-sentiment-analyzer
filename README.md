@@ -85,4 +85,4 @@ Thanks to [Prime Digital Academy](https://www.primeacademy.io) for providing the
 
 
 ## In Progress 
-Improving search function to allow users search the tweets throughout a time period. 
+Improving search function to allow users search the tweets by a time range. 
