@@ -30,7 +30,7 @@ In this demo, the user is a Verizon representative who interested in researching
 ![View of the saved Twitter page](/public/images/TSA-tweet-result-page.jpg)
 <sup>View of the saved tweets page<sup>
 
-## Prerequisites for Twitter Developer
+## Prerequisites for Twitter API
 
 To use the Twitter API, you can establish a twitter developer account following [here](https://developer.twitter.com/en/apply-for-access). 
 
