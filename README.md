@@ -53,7 +53,7 @@ Before you get started, you can check if the following softwares have been insta
 7. Running the two previous commands will open a web browser with the application
 
 
-## Usage
+## Usage Instruction
 
 1. Login with your username and password or navigate to the Register page to set up an account with your username and password.
 2. Users can access the "About" page without logging in. The "About" page provides general view of the application.
