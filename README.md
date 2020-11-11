@@ -84,5 +84,5 @@ Before you get started, you can check if the following softwares have been insta
 Thanks to [Prime Digital Academy](https://www.primeacademy.io) for providing the knowledge to create this application
 
 
-## In Progress/Future Updates
+## Future Updates
 Improving search function to allow users search the tweets by a time range. 
