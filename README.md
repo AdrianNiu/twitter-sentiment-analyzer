@@ -37,9 +37,9 @@ To use the Twitter API, you can establish a twitter developer account following 
 Before you get started, you can check if the following softwares have been installed on your computer:
 
 
-## Installation Steps
+## Installation Instructions
 
-1. Create a new database named `primie_app`
+1. Create a new database named `primie_app` (or other names you preferred)
     * The `database.sql` file contains the queries you will need to be able to set up the required tables for this application
 2. Run `npm install`
 3. Create a `.env` file at the root of the project and paste this line into the file:
