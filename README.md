@@ -13,7 +13,7 @@ The AFINN lexicon is a list of English terms manually rated for valence with an 
 
 Below is the page views of the app, you can search a keyword you are interested in, and see how people are talking about it on Twitter. 
 
-In this demo, the user is a Verizon representative who interested in learning how people think about the brand and services. 
+In this demo, the user is a Verizon representative who interested in learning how people think about its brand and services. 
 
 ![View of the Search Page](/public/images/TSA-search-page.jpg)
 <sup>View of the Search Page<sup>
