@@ -55,6 +55,6 @@ function* PieSaga() {
     yield takeLatest('GET_PIE', getPieSaga);
     yield takeLatest('PIE_NOTES', putPieSaga);
 }
-// sagas function similar as action in plone src folder
+// sagas function similar as action in plone src action folder
 
 export default PieSaga;
