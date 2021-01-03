@@ -13,7 +13,7 @@ CREATE TABLE "user"
     "id" SERIAL PRIMARY KEY,
     "username" VARCHAR (80) UNIQUE NOT NULL,
     "password" VARCHAR (1000) NOT NULL,
-    "email" VARCHAR (255),
+    "email" VARCHAR (255)
  );
  
 
@@ -27,7 +27,7 @@ CREATE TABLE "sentiment_result"
     "time" VARCHAR (100),
     "keyword" VARCHAR (100),
     "notes" VARCHAR (1000),
-    "user_id" INT,
+    "user_id" INT
 );
 
 CREATE TABLE "sentiment_pie"
@@ -39,7 +39,7 @@ CREATE TABLE "sentiment_pie"
     "notes" VARCHAR(1000),
     "keyword" VARCHAR(100),
     "time" VARCHAR(100),
-    "user_id" INT,
+    "user_id" INT
 );
 
 -- for future relational database expansion
